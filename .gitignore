@@ -73,3 +73,27 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+/Newsday/[Ll]ibrary/
+/Newsday/[Tt]emp/
+/Newsday/[Oo]bj/
+/Newsday/[Bb]uild/
+/Newsday/[Bb]uilds/
+/Newsday/[Ll]ogs/
+/Newsday/[Uu]ser[Ss]ettings/
+
+/Newsday/Library/
+/Newsday/Temp/
+/Newsday/Obj/
+/Newsday/Build/
+/Newsday/Builds/
+/Newsday/Logs/
+/Newsday/UserSettings/
+
+/Newsday/library/
+/Newsday/temp/
+/Newsday/obj/
+/Newsday/build/
+/Newsday/builds/
+/Newsday/logs/
+/Newsday/usersettings/

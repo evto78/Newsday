@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3afb2448c0e5e419c50c90314c17d4, type: 3}
+  m_Name: Test Article 2
+  m_EditorClassIdentifier: 
+  headline: Everything is ok actualy :)
+  image: {fileID: 21300000, guid: 1f001a5c14352c446837822cca30f5b3, type: 3}
+  author: Trustwory Scientist
+  date: 2023/01/01
+  bodyText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus
+    ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis
+    convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla
+    lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer
+    nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora
+    torquent per conubia nostra inceptos himenaeos.
+
+
+    Lorem ipsum dolor sit amet
+    consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
+    placerat. In id cursus mi pretium tellus duis convallis. Global warming is NOT
+    REAL!. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla
+    lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer
+    nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora
+    torquent per conubia nostra inceptos himenaeos.
+
+
+    Lorem ipsum dolor sit amet
+    consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
+    placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean
+    sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+    Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper
+    vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos
+    himenaeos.
+
+
+    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+    faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus
+    duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla
+    lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer
+    nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora
+    torquent per conubia nostra inceptos himenaeos.
+
+
+    Lorem ipsum dolor sit amet
+    consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
+    placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean
+    sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+    Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper
+    vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos
+    himenaeos.'
+  id: -1
+  misinfo:
+  - location: 4
+    type: 6
+    inArticleText: Global warming is NOT REAL!
+  hue: {r: 0, g: 1, b: 0.041554213, a: 1}

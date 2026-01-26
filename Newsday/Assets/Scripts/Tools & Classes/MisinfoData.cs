@@ -9,4 +9,5 @@ public class MisinfoData
     public Type type = Type.truthful;
     [Header("If Location is Text:")]
     public string inArticleText = "NA";
+    public string linkID;
 }

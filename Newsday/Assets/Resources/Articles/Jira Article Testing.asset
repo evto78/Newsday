@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3afb2448c0e5e419c50c90314c17d4, type: 3}
   m_Name: Jira Article Testing
   m_EditorClassIdentifier: Assembly-CSharp::ArticleData
-  headline: HEADLINE
-  image: {fileID: 0}
-  author: AUTHOR
+  headline: It is not real
+  image: {fileID: 21300000, guid: 5846d5190b2f666488dd0feefcb7bbcd, type: 3}
+  author: John Pork
   date: 2026/01/01
-  bodyText: 
+  bodyText: A group of students found out that John Pork doesn't actually exitst,
+    it is a fictional character created by Photoshop.
   id: -1
-  misinfo: []
+  misinfo:
+  - location: 0
+    type: 0
+    inArticleText: 
+    linkID: 
   hue: {r: 1, g: 0, b: 0, a: 1}

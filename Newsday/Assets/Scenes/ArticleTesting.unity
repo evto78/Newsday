@@ -1805,7 +1805,7 @@ MonoBehaviour:
   articleWindow: {fileID: 832876895}
   allArticles: []
   currentArticle: {fileID: 0}
-  overrideArticle: {fileID: 11400000, guid: 927314ea48c53f24bab8c2b3cba8e045, type: 2}
+  overrideArticle: {fileID: 11400000, guid: fbac7dc70d01bdc4c910a66b0b0284ee, type: 2}
 --- !u!4 &1004561943
 Transform:
   m_ObjectHideFlags: 0

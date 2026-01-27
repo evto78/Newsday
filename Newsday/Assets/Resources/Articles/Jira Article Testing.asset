@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jira Article Testing
   m_EditorClassIdentifier: Assembly-CSharp::ArticleData
   headline: It is not real
-  image: {fileID: 21300000, guid: 5846d5190b2f666488dd0feefcb7bbcd, type: 3}
+  image: {fileID: 21300000, guid: 2c6dd7220c9569d49abd1121599d7b0b, type: 3}
   author: John Pork
   date: 2026/01/01
   bodyText: A group of students found out that John Pork doesn't actually exitst,

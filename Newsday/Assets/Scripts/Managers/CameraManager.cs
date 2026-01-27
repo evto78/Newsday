@@ -53,11 +53,6 @@ public class CameraManager : MonoBehaviour
         jumpToScene((_scene + 1) % _sceneUI.Length);
     }
 
-    public void Update()
-    {
-        jumpToScene(_scene);
-    }
-
     public void turnOffAllUI()
     {
         for(int i = 0; i < _sceneUI.Length; i++)

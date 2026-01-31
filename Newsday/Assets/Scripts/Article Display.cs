@@ -1,7 +1,8 @@
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ArticleDisplay : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class ArticleDisplay : MonoBehaviour
     public TextMeshProUGUI bodyText;
     public Image bg;
     CursorManager cursorManager;
+    ArticleManager articleManager;
     private void Awake()
     {
         articleSV = new List<Vector2>();
@@ -35,8 +37,10 @@ public class ArticleDisplay : MonoBehaviour
 
         cursorManager = GameObject.Find("CursorManager").GetComponent<CursorManager>();
     }
-    public void LoadArticle(ArticleData inputArticle)
+    public void LoadArticle(ArticleData inputArticle, ArticleManager manager)
     {
+        articleManager = manager;
+
         headline.text = inputArticle.headline;
         date.text = inputArticle.date;
         author.text = inputArticle.author;
@@ -81,6 +85,7 @@ public class ArticleDisplay : MonoBehaviour
     private void ClickInlineText(string keyword, TMP_Text tmp)
     {
         Debug.Log("Clicked : " + keyword);
+        articleManager.ElementClicked(tmp.gameObject, keyword);
     }
     private void HoverInlineText(string keyword, TMP_Text tmp)
     {

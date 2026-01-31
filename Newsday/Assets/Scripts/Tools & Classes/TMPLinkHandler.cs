@@ -29,26 +29,26 @@ public class TMPLinkHandler : MonoBehaviour, IPointerClickHandler
         if(activeCanvas.renderMode == RenderMode.ScreenSpaceOverlay) { activeCamera = null; }
         else { activeCamera = activeCanvas.worldCamera; }
     }
-    string lastFrameHover; bool hovering;
+    bool hovering; TMP_LinkInfo prevLinkInfo;
     private void Update()
     {
-        hovering = false;
-
         Vector3 mousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
 
         var linkTaggedText = TMP_TextUtilities.FindIntersectingLink(textBox, mousePos, activeCamera);
 
-        
         if (linkTaggedText != -1)
         {
-            hovering = true;
             TMP_LinkInfo linkInfo = textBox.textInfo.linkInfo[linkTaggedText];
-            lastFrameHover = linkInfo.GetLinkText();
 
             OnHoverOverLinkEvent.Invoke(linkInfo.GetLinkText(), textBox);
+            hovering = true;
+            prevLinkInfo = linkInfo;
         }
-        else { lastFrameHover = ""; }
-        if(lastFrameHover != "" && !hovering) { OnStopHoverOverLinkEvent.Invoke(lastFrameHover, textBox); }
+        else if (hovering)
+        {
+            OnStopHoverOverLinkEvent.Invoke(prevLinkInfo.GetLinkText(), textBox);
+            hovering = false;
+        }
     }
     public void OnPointerClick(PointerEventData eventData)
     {

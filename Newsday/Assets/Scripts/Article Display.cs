@@ -15,6 +15,7 @@ public class ArticleDisplay : MonoBehaviour
     public Image thumbnail;
     public TextMeshProUGUI bodyText;
     public Image bg;
+    CursorManager cursorManager;
     private void Awake()
     {
         articleSV = new List<Vector2>();
@@ -31,6 +32,8 @@ public class ArticleDisplay : MonoBehaviour
             }
             articleSV.Add(new Vector2(S,V));
         }
+
+        cursorManager = GameObject.Find("CursorManager").GetComponent<CursorManager>();
     }
     public void LoadArticle(ArticleData inputArticle)
     {
@@ -82,11 +85,13 @@ public class ArticleDisplay : MonoBehaviour
     private void HoverInlineText(string keyword, TMP_Text tmp)
     {
         Debug.Log("Hovering over : " + keyword);
-        //tmp.text.Replace(keyword, "<u>" + keyword + "</u>");
+        if(cursorManager == null) { return; }
+        cursorManager.ChangeCursor(1);
     }
     private void StopHoverInlineText(string keyword, TMP_Text tmp)
     {
         Debug.Log("Stopped hovering over : " + keyword);
-        //tmp.text.Replace("<u>" + keyword + "</u>", keyword);
+        if(cursorManager == null) { return; }
+        cursorManager.ChangeCursor(0);
     }
 }

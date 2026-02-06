@@ -23,6 +23,11 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private bool exactPosition = false;
     [SerializeField] private Vector2[] _scenePosition;
 
+    public void Start()
+    {
+        jumpToScene(_scene);
+    }
+
     public void jumpToScene(int scene)
     {
         if (scene >= _sceneUI.Length) return;

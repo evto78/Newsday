@@ -2,7 +2,7 @@ using UnityEngine;
 /***********************************
 * Class Name: Checklist Item Toggle
 * Last Person Edited: Ryan McBride
-* Last Date Edited:Jan 26, 2026
+* Last Date Edited:Feb 7, 2026
 * Description: Toggle manager for the items in the checklist UI
 * 0 if the player toggled no
 * 1 if the player toggled yes

@@ -37,6 +37,8 @@ public class ArticleManager : MonoBehaviour
     }
     public void ElementClicked(GameObject element, string text)
     {
+        if (imageClicked == null || textClicked == null) { return; }
+
         imageClicked.sprite = null; textClicked.text = "";
         if (text != "")
         {

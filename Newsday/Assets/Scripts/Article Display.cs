@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ArticleDisplay : MonoBehaviour
 {
-    List<Vector2> articleSV;
+    List<Vector2> articleSV = new List<Vector2>();
     [Header("References")]
     public List<TextMeshProUGUI> textElements;
     public List<Image> imageElements;
@@ -20,25 +20,31 @@ public class ArticleDisplay : MonoBehaviour
     ArticleManager articleManager;
     private void Awake()
     {
+        SetUp();
+    }
+    void SetUp()
+    {
         articleSV = new List<Vector2>();
         float H; float S; float V;
-        for(int i = 0; i < textElements.Count+imageElements.Count; i++)
+        for (int i = 0; i < textElements.Count + imageElements.Count; i++)
         {
-            if(i < textElements.Count)
+            if (i < textElements.Count)
             {
                 Color.RGBToHSV(textElements[i].color, out H, out S, out V);
             }
             else
             {
-                Color.RGBToHSV(imageElements[i-textElements.Count].color, out H, out S, out V);
+                Color.RGBToHSV(imageElements[i - textElements.Count].color, out H, out S, out V);
             }
-            articleSV.Add(new Vector2(S,V));
+            articleSV.Add(new Vector2(S, V));
         }
 
         cursorManager = GameObject.Find("CursorManager").GetComponent<CursorManager>();
     }
     public void LoadArticle(ArticleData inputArticle, ArticleManager manager)
     {
+        if (articleSV.Count < 1) { SetUp(); }
+
         articleManager = manager;
 
         headline.text = inputArticle.headline;

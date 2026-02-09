@@ -20,4 +20,9 @@ public class ArticleData : ScriptableObject
 
     [Header("Apparance")]
     public Color hue = Color.red;
+    //Small Image is 300x300 ratio, Large Image is 650x300 ratio
+    //Small can hold ~1300 characters in body text
+    //Large can hold ~1100 characters in body text
+    public enum Layout { SmallImage, LargeImageLeft, LargeImageRight}
+    public Layout articleLayout = Layout.SmallImage;
 }

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ArticleManager : MonoBehaviour
 {
     [Header("References")]
-    public ArticleDisplay articleWindow;
+    public List<ArticleDisplay> articleWindows;
     [Header("Data")]
     public List<ArticleData> allArticles;
     public ArticleData currentArticle;
@@ -25,7 +25,14 @@ public class ArticleManager : MonoBehaviour
         if(overrideArticle == null) { currentArticle = allArticles[0]; }
         else { currentArticle = overrideArticle; }
 
-        articleWindow.LoadArticle(currentArticle, this);
+        foreach (ArticleDisplay display in articleWindows) { display.gameObject.SetActive(false); }
+        switch (currentArticle.articleLayout)
+        {
+            case ArticleData.Layout.SmallImage: articleWindows[0].gameObject.SetActive(true); articleWindows[0].LoadArticle(currentArticle, this); break;
+            case ArticleData.Layout.LargeImageLeft: articleWindows[1].gameObject.SetActive(true); articleWindows[1].LoadArticle(currentArticle, this); break;
+            case ArticleData.Layout.LargeImageRight: articleWindows[2].gameObject.SetActive(true); articleWindows[2].LoadArticle(currentArticle, this); break;
+        }
+        
     }
     bool hovering; GameObject clickedElement;
     private void Update()

@@ -59,6 +59,11 @@ MonoBehaviour:
   id: -1
   misinfo:
   - location: 3
-    type: 0
     inArticleText: 
+    linkID: 
+    type: 0
+    checklist: 0000000000
+    checkListItems: 0000000000000000000000000000000000000000
+    answerKey: 0100000001000000010000000100000001000000
   hue: {r: 1, g: 0.5844725, b: 0, a: 1}
+  articleLayout: 0

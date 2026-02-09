@@ -40,6 +40,7 @@ public class BoogleManager : MonoBehaviour
 
     void Update()
     {
+        //update the current progress of the loading bar if 
         if (loading)
         {
             loadingBar();
@@ -55,7 +56,7 @@ public class BoogleManager : MonoBehaviour
         {
             baseSlider.value = loadingCurve.Evaluate((Time.time - startTime) / loadingDuration);
         }
-        else//the base
+        else//the base isn't active and its the regular search UI
         {
             searchSlider.value = loadingCurve.Evaluate((Time.time - startTime) / loadingDuration);
         }
@@ -74,6 +75,7 @@ public class BoogleManager : MonoBehaviour
     //DONE I THINK
     public void loadAssets()
     {
+        //only switch after we are done loading
         //if we are still in the base search UI
         if (baseUI.activeInHierarchy)
         {
@@ -106,14 +108,33 @@ public class BoogleManager : MonoBehaviour
     //When the search button is pressed
     public void search()
     {
+        //reset the slider values to 0
+        baseSlider.value = 0;
+        searchSlider.value = 0;
+
+        //mark the current time to know how much time has passed
         startTime = Time.time;
         loading = true;
-        //get the information what the player has selected from the article
 
+
+        //get the information what the player has selected from the article
+        //article.get_info
 
         //whats the type of information that we want to have selected. 
-
-
+        selectionType = InformationType.TEXT;//to be commented out. 
+        
+        
+        switch (selectionType)
+        {
+            case InformationType.TEXT:
+                loadingDuration = textSearchTime;
+                break;
+            case InformationType.IMAGE:
+                loadingDuration = imageSearchTime;
+                break;
+            default:
+                loadingDuration = baseSearchTime; break;
+        }
     }
 
 }

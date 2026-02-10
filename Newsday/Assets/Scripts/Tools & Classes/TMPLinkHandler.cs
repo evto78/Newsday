@@ -6,6 +6,9 @@ using UnityEngine.UI;
 [RequireComponent(typeof(TMP_Text))]
 public class TMPLinkHandler : MonoBehaviour, IPointerClickHandler
 {
+    //A very magical script that allows linked text to be clickable within tmpro
+    //must be added to the same gameobject as the tmpro for it to work
+
     private TMP_Text textBox;
     private Canvas activeCanvas;
     private Camera activeCamera;

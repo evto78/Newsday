@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class OfficeManager : MonoBehaviour
 {
+    //ALL WIP, HANDLE USB INTERACTIONS IN OFFICE SCENE
     public Rigidbody2D usbRb;
     public ClickAndDragPhysics usbScript;
     public Transform usbSlot;

@@ -8,23 +8,26 @@ using UnityEngine.UI;
 public class ArticleManager : MonoBehaviour
 {
     [Header("References")]
-    public List<ArticleDisplay> articleWindows;
+    public List<ArticleDisplay> articleWindows; //All layouts of the articles, 0 is small, 1 is large left, 2 is large right
     [Header("Data")]
-    public List<ArticleData> allArticles;
+    public List<ArticleData> allArticles; //A list of all of the article objects in the resources folder
     public ArticleData currentArticle;
     [Header("Debug / Testing")]
-    public ArticleData overrideArticle;
-    public Image imageClicked;
-    public TextMeshProUGUI textClicked;
+    public ArticleData overrideArticle; //Ignore proper behavior and instead load this article
+    public Image imageClicked; //Image to change to the last image clicked
+    public TextMeshProUGUI textClicked; //Text to change to the last text clicked
     private void Awake() { SetUp(); }
     void SetUp()
     {
+        //Grab all articles from the resources folder
         allArticles = new List<ArticleData>();
         allArticles.AddRange(Resources.LoadAll<ArticleData>("Articles"));
 
+        //If there is a override article, make the current article that override, otherwise select the first article
         if(overrideArticle == null) { currentArticle = allArticles[0]; }
         else { currentArticle = overrideArticle; }
 
+        //Set the article layout to be the correct shape according to the current article
         foreach (ArticleDisplay display in articleWindows) { display.gameObject.SetActive(false); }
         switch (currentArticle.articleLayout)
         {
@@ -34,9 +37,10 @@ public class ArticleManager : MonoBehaviour
         }
         
     }
-    bool hovering; GameObject clickedElement;
+    GameObject clickedElement;
     private void Update()
     {
+        //If a clickable component of the article is clicked...
         if (Input.GetMouseButtonDown(0) && IsPointerOverUIElement(GetEventSystemRaycastResults()))
         {
             ElementClicked(clickedElement, "");
@@ -44,6 +48,7 @@ public class ArticleManager : MonoBehaviour
     }
     public void ElementClicked(GameObject element, string text)
     {
+        //When something is clicked, set the image to the clicked image, and set the text to the clicked text
         if (imageClicked == null || textClicked == null) { return; }
 
         imageClicked.sprite = null; textClicked.text = "";
@@ -73,6 +78,7 @@ public class ArticleManager : MonoBehaviour
             }
         }
     }
+    //Check if the cursor is over a ui element with the clickable tag
     private bool IsPointerOverUIElement(List<RaycastResult> eventSystemRaysastResults)
     {
         for (int index = 0; index < eventSystemRaysastResults.Count; index++)

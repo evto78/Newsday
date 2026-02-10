@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class CursorManager : MonoBehaviour
 {
+    //Changes the cursor to show what is clickable
     [System.Serializable]
     public class CursorData { public Texture2D cursorSprite; public Vector2 hotspot; }
     public List<CursorData> cursors;

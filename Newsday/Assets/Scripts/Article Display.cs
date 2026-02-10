@@ -6,9 +6,12 @@ using UnityEngine.UI;
 
 public class ArticleDisplay : MonoBehaviour
 {
+    //The saturation and value of various color objects in the articles
     List<Vector2> articleSV = new List<Vector2>();
     [Header("References")]
+    //All text elements of the article
     public List<TextMeshProUGUI> textElements;
+    //All image elements of the article
     public List<Image> imageElements;
     public TextMeshProUGUI headline;
     public TextMeshProUGUI date;
@@ -24,6 +27,7 @@ public class ArticleDisplay : MonoBehaviour
     }
     void SetUp()
     {
+        //Get initial color values of the article parts so it can be changed later
         articleSV = new List<Vector2>();
         float H; float S; float V;
         for (int i = 0; i < textElements.Count + imageElements.Count; i++)
@@ -43,6 +47,7 @@ public class ArticleDisplay : MonoBehaviour
     }
     public void LoadArticle(ArticleData inputArticle, ArticleManager manager)
     {
+        //Called by article manager to load up the next article
         if (articleSV.Count < 1) { SetUp(); }
 
         articleManager = manager;
@@ -52,6 +57,7 @@ public class ArticleDisplay : MonoBehaviour
         author.text = inputArticle.author;
         thumbnail.sprite = inputArticle.image;
         bodyText.text = inputArticle.bodyText;
+        //Currently useless loop for processing misinfo data
         foreach(MisinfoData misinfo in inputArticle.misinfo)
         {
             switch (misinfo.location)
@@ -62,7 +68,7 @@ public class ArticleDisplay : MonoBehaviour
                     break;
             }
         }
-
+        //Change the color of the article to match articles hue
         Color.RGBToHSV(inputArticle.hue, out float H, out float S, out float V);
         for (int i = 0; i < textElements.Count + imageElements.Count; i++)
         {
@@ -76,6 +82,7 @@ public class ArticleDisplay : MonoBehaviour
             }
         }
     }
+    // varios methods and functions for handleing clickable text:
     private void OnEnable()
     {
         TMPLinkHandler.OnClickedOnLinkEvent += ClickInlineText;

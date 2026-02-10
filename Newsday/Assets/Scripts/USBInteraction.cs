@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class USBInteraction : MonoBehaviour
 {
+    //ALL WIP, HAVE AN EFFECT HAPPEN WHEN A USB TAGGED OBJECT INTERACTS WITH THIS
     public OfficeManager manager;
     public int id;
     private void OnTriggerEnter2D(Collider2D collision)

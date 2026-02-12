@@ -66,5 +66,12 @@ MonoBehaviour:
     checklist: 0000000000
     checkListItems: 0000000000000000000000000000000000000000
     answerKey: 0100000001000000010000000100000001000000
+  - location: 4
+    inArticleText: CLICK HERE
+    linkID: clickhere
+    type: 1
+    checklist: 0000000000
+    checkListItems: 0000000000000000000000000000000000000000
+    answerKey: 0100000001000000010000000100000001000000
   hue: {r: 0, g: 1, b: 0.041554213, a: 1}
   articleLayout: 2

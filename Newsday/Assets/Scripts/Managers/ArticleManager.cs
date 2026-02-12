@@ -11,6 +11,7 @@ public class ArticleManager : MonoBehaviour
     public List<ArticleDisplay> articleWindows; //All layouts of the articles, 0 is small, 1 is large left, 2 is large right
     [Header("Data")]
     public List<ArticleData> allArticles; //A list of all of the article objects in the resources folder
+    public List<ArticleData> allValidArticles; //All articles with an id above -1, sorted by id
     public ArticleData currentArticle;
     [Header("Debug / Testing")]
     public ArticleData overrideArticle; //Ignore proper behavior and instead load this article
@@ -23,8 +24,22 @@ public class ArticleManager : MonoBehaviour
         allArticles = new List<ArticleData>();
         allArticles.AddRange(Resources.LoadAll<ArticleData>("Articles"));
 
+        //Parse all articles to find all valid articles
+        allValidArticles = new List<ArticleData>();
+        foreach(ArticleData article in allArticles)
+        {
+            if (article.id > -1) { allValidArticles.Add(article); }
+        }
+
+        //Sort all valid articles to be in order of id
+        List<int> indexList = new List<int>();
+        List<ArticleData> sortedList = new List<ArticleData>();
+        foreach (ArticleData article in allValidArticles) { indexList.Add(article.id); }
+        int index = 0; foreach (ArticleData article in allValidArticles) { sortedList.Add(allValidArticles[indexList.IndexOf(index)]); index++; }
+        allValidArticles = sortedList;
+
         //If there is a override article, make the current article that override, otherwise select the first article
-        if(overrideArticle == null) { currentArticle = allArticles[0]; }
+        if(overrideArticle == null) { currentArticle = allValidArticles[0]; }
         else { currentArticle = overrideArticle; }
 
         //Set the article layout to be the correct shape according to the current article
@@ -36,6 +51,47 @@ public class ArticleManager : MonoBehaviour
             case ArticleData.Layout.LargeImageRight: articleWindows[2].gameObject.SetActive(true); articleWindows[2].LoadArticle(currentArticle, this); break;
         }
         
+    }
+    public void NextArticle()
+    {
+        if (currentArticle.id == allValidArticles.Count - 1) { return; }
+        currentArticle = allValidArticles[currentArticle.id + 1];
+
+        //Set the article layout to be the correct shape according to the current article
+        foreach (ArticleDisplay display in articleWindows) { display.gameObject.SetActive(false); }
+        switch (currentArticle.articleLayout)
+        {
+            case ArticleData.Layout.SmallImage: articleWindows[0].gameObject.SetActive(true); articleWindows[0].LoadArticle(currentArticle, this); break;
+            case ArticleData.Layout.LargeImageLeft: articleWindows[1].gameObject.SetActive(true); articleWindows[1].LoadArticle(currentArticle, this); break;
+            case ArticleData.Layout.LargeImageRight: articleWindows[2].gameObject.SetActive(true); articleWindows[2].LoadArticle(currentArticle, this); break;
+        }
+    }
+    public void PreviousArticle()
+    {
+        if (currentArticle.id == 0) { return; }
+        currentArticle = allValidArticles[currentArticle.id - 1];
+
+        //Set the article layout to be the correct shape according to the current article
+        foreach (ArticleDisplay display in articleWindows) { display.gameObject.SetActive(false); }
+        switch (currentArticle.articleLayout)
+        {
+            case ArticleData.Layout.SmallImage: articleWindows[0].gameObject.SetActive(true); articleWindows[0].LoadArticle(currentArticle, this); break;
+            case ArticleData.Layout.LargeImageLeft: articleWindows[1].gameObject.SetActive(true); articleWindows[1].LoadArticle(currentArticle, this); break;
+            case ArticleData.Layout.LargeImageRight: articleWindows[2].gameObject.SetActive(true); articleWindows[2].LoadArticle(currentArticle, this); break;
+        }
+    }
+    public void SetArticle(int id)
+    {
+        currentArticle = allValidArticles[id];
+
+        //Set the article layout to be the correct shape according to the current article
+        foreach (ArticleDisplay display in articleWindows) { display.gameObject.SetActive(false); }
+        switch (currentArticle.articleLayout)
+        {
+            case ArticleData.Layout.SmallImage: articleWindows[0].gameObject.SetActive(true); articleWindows[0].LoadArticle(currentArticle, this); break;
+            case ArticleData.Layout.LargeImageLeft: articleWindows[1].gameObject.SetActive(true); articleWindows[1].LoadArticle(currentArticle, this); break;
+            case ArticleData.Layout.LargeImageRight: articleWindows[2].gameObject.SetActive(true); articleWindows[2].LoadArticle(currentArticle, this); break;
+        }
     }
     GameObject clickedElement;
     private void Update()

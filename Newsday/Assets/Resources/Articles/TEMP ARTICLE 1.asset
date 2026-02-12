@@ -10,20 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b3afb2448c0e5e419c50c90314c17d4, type: 3}
-  m_Name: test
+  m_Name: TEMP ARTICLE 1
   m_EditorClassIdentifier: Assembly-CSharp::ArticleData
-  headline: HEADLINE
+  headline: ARTICLE #1
   image: {fileID: 0}
   author: AUTHOR
   date: 2026/01/01
-  bodyText: 
-  id: -1
-  misinfo:
-  - location: 0
-    inArticleText: 
-    linkID: 
-    type: 0
-    checklist: 
-    checkListItems: 
-    answerKey: 
+  bodyText: This is article ID 0.
+  id: 0
+  misinfo: []
   hue: {r: 1, g: 0, b: 0, a: 1}
+  articleLayout: 0

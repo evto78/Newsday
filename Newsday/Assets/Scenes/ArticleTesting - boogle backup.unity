@@ -3500,12 +3500,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f8e26c4ec1010f4bb125d97b919c87b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  articleWindow: {fileID: 832876895}
+  articleWindows: []
   allArticles: []
+  allValidArticles: []
   currentArticle: {fileID: 0}
   overrideArticle: {fileID: 11400000, guid: 927314ea48c53f24bab8c2b3cba8e045, type: 2}
-  imageClicked: {fileID: 800702919}
-  textClicked: {fileID: 1820991420}
+  imageClicked: {fileID: 0}
+  textClicked: {fileID: 0}
 --- !u!4 &1004561943
 Transform:
   m_ObjectHideFlags: 0

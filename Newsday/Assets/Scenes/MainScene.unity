@@ -590,6 +590,11 @@ RectTransform:
   m_Children:
   - {fileID: 1883440025}
   - {fileID: 1415197009}
+  - {fileID: 2071351313}
+  - {fileID: 2032869590}
+  - {fileID: 673178960}
+  - {fileID: 599956003}
+  - {fileID: 471506011}
   m_Father: {fileID: 876654606}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2492,6 +2497,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &471506010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 471506011}
+  m_Layer: 0
+  m_Name: Temporary Approve/Rejection Screens
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &471506011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471506010}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 83.15161, y: -13.069031, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 198259026}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &472629218
 GameObject:
   m_ObjectHideFlags: 0
@@ -3621,7 +3657,7 @@ RectTransform:
   - {fileID: 245896499}
   - {fileID: 1281759135}
   - {fileID: 2041909940}
-  m_Father: {fileID: 876654606}
+  m_Father: {fileID: 198259026}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014, y: 0.117444456}
   m_AnchorMax: {x: 0.9887708, y: 0.9761482}
@@ -4817,10 +4853,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 198259026}
-  - {fileID: 599956003}
-  - {fileID: 2071351313}
-  - {fileID: 2032869590}
-  - {fileID: 673178960}
   - {fileID: 614264312}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10884,7 +10916,7 @@ RectTransform:
   m_Children:
   - {fileID: 1550820034}
   - {fileID: 1189267005}
-  m_Father: {fileID: 876654606}
+  m_Father: {fileID: 198259026}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014, y: 0.117444456}
   m_AnchorMax: {x: 0.9887708, y: 0.9761482}
@@ -11155,7 +11187,7 @@ RectTransform:
   - {fileID: 1739329615}
   - {fileID: 1963160215}
   - {fileID: 824995301}
-  m_Father: {fileID: 876654606}
+  m_Father: {fileID: 198259026}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014, y: 0.117444456}
   m_AnchorMax: {x: 0.9887708, y: 0.9761482}
@@ -11670,7 +11702,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 876654606}
+    m_TransformParent: {fileID: 198259026}
     m_Modifications:
     - target: {fileID: 1328969924292773262, guid: be86c979ec5d042449bae20c6f9df11e, type: 3}
       propertyPath: m_Enabled

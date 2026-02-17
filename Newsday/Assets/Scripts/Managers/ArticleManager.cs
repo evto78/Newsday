@@ -17,6 +17,8 @@ public class ArticleManager : MonoBehaviour
     public ArticleData overrideArticle;
     public Image imageClicked;
     public TextMeshProUGUI textClicked;
+
+    [SerializeField] private BoogleManager boogleManager;   
     private void Awake() { SetUp(); }
     void SetUp()
     {
@@ -34,6 +36,18 @@ public class ArticleManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && IsPointerOverUIElement(GetEventSystemRaycastResults()))
         {
             ElementClicked(clickedElement, "");
+            //gets the text to display in the boogle search bar
+            boogleManager.updateSearchBarText(getLastClicked());
+
+            //preps the results
+            if(currentArticle.boogleSearchReturn(getLastClicked()) == "-1"){//if its an image then select the image result
+                boogleManager.imageResult(currentArticle.getBoogleImage());
+            }
+            else
+            {
+                boogleManager.textResult(currentArticle.boogleSearchReturn(getLastClicked()));
+            }
+            
         }
     }
 

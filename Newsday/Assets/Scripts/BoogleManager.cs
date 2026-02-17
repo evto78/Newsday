@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using System.Runtime.CompilerServices;
 public class BoogleManager : MonoBehaviour
 {
-    [SerializeField] private ArticleManager articleManager;
+    
 
     [SerializeField] private Slider baseSlider, searchSlider;
     [SerializeField] private AnimationCurve loadingCurve;
@@ -39,16 +39,16 @@ public class BoogleManager : MonoBehaviour
     }
 
     [SerializeField] TMP_Text mainSearchTextField, subSearchTextField;
-    public void updateSearchBarText()
+    public void updateSearchBarText(string engineText)
     {
-        string engineText = articleManager.getLastClicked();
         mainSearchTextField.text = engineText;
         subSearchTextField.text = engineText;
     }
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)) updateSearchBarText();
+        
+        
 
         //update the current progress of the loading bar if 
         if (loading)
@@ -58,6 +58,19 @@ public class BoogleManager : MonoBehaviour
 
     }
 
+    public void imageResult(Sprite result)
+    {
+        selectionType = InformationType.IMAGE;
+        tempImgResult = result;
+    }
+
+    public void textResult(string result)
+    {
+        selectionType = InformationType.TEXT;
+        tempTextResult = result;
+    }
+    Sprite tempImgResult;
+    string tempTextResult;
 
     //DONE
     public void loadingBar()
@@ -100,9 +113,11 @@ public class BoogleManager : MonoBehaviour
         {
             case InformationType.TEXT:
                 text.SetActive(true);
+                text.GetComponent<TextMeshProUGUI>().text = tempTextResult;
                 break;
             case InformationType.IMAGE:
                 image.SetActive(true);
+                image.GetComponent<Image>().sprite = tempImgResult;
                 break;
         }
     }

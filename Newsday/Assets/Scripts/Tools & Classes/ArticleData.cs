@@ -1,6 +1,7 @@
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.U2D;
 
 [CreateAssetMenu(fileName = "New Article", menuName = "Article/Create New Article")]
 [System.Serializable]
@@ -26,11 +27,20 @@ public class ArticleData : ScriptableObject
     public Sprite BS_image;
     public string BS_author;
     public string BS_date;
+    public string bodyFact;
     public string BS_bodyText;
 
 
-    public string boogleSearchReturn() {
-        if (date == "") ;
+    public Sprite getBoogleImage()
+    {
+        return BS_image;
+    }
+    public string boogleSearchReturn(string search) {
+        if (date == search) return BS_date;
+        if(headline == search) return BS_headline;
+        if(image.name == search) return "-1";
+        if (author == search) return BS_author;
+        if (bodyFact == search) return BS_bodyText;
         return "";
     }
 }

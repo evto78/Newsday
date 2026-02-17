@@ -67,3 +67,9 @@ MonoBehaviour:
     checkListItems: 0000000000000000000000000000000000000000
     answerKey: 0100000001000000010000000100000001000000
   hue: {r: 0, g: 1, b: 0.041554213, a: 1}
+  BS_headline: This is just a title
+  BS_image: {fileID: 0}
+  BS_author: They work for the company
+  BS_date: That isn't the correct date
+  bodyFact: General Fact
+  BS_bodyText: Something doesn't add up

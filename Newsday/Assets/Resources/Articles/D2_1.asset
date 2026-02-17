@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3afb2448c0e5e419c50c90314c17d4, type: 3}
+  m_Name: D2_1
+  m_EditorClassIdentifier: Assembly-CSharp::ArticleData
+  headline: Mega-Shed Corporation in Dusty Divot completed ahead of schedule
+  image: {fileID: 0}
+  author: Jonesy Steinberg
+  date: 2026/01/21
+  bodyText: "Vindertech Corp announced Tuesday that the massive canopy over dusty
+    divoy excavation is now operational. The project, that faced several delays <link=\u201DD11\u201D>due
+    to meteoric activity and mysterious purple energy spikes, was finished 3 weeks
+    early thanks to \u201Cenhanced labor protocols\u201D </link>\r\n\u201Cwe wanted
+    to ensure that researches have a roof over their heads before the next storm
+    cycle hits\u201D, said a vindertech site lead.\r\nRetail Row residents have expressed
+    concerns about noise levels and water pollution. One resident, who wished to
+    remain anonymous, stated: \u201CIt\u2019s not just the construction noise, but
+    later at night you can hear this low humming sound coming from the pit. <link=\u201DD12\u201D>
+    My TV keeps glitching to a llama-shaped test pattern. I just wanna sleep.\u201D
+    </link>\r\n"
+  id: 6
+  misinfo:
+  - location: 4
+    inArticleText: due to meteoric activity and mysterious purple energy spikes,
+      was finished 3 weeks early thanks to "enhanced labor protocols"
+    linkID: D11
+    type: 0
+    checklist: 
+    checkListItems: 
+    answerKey: 
+  - location: 4
+    inArticleText: "My TV keeps glitching to a llama-shaped test pattern. I just
+      wanna sleep.\u201D"
+    linkID: D12
+    type: 0
+    checklist: 
+    checkListItems: 
+    answerKey: 
+  hue: {r: 1, g: 0, b: 0, a: 1}
+  articleLayout: 0

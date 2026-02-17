@@ -26,6 +26,13 @@ MonoBehaviour:
     is as cheap as it gets. A representative from Bunkin says \u201CWe are as cheap
     as it gets, but we still provide the best quality in our coffee.\u201D\r\n"
   id: 2
-  misinfo: []
+  misinfo:
+  - location: 1
+    inArticleText: 
+    linkID: 
+    type: 0
+    checklist: 
+    checkListItems: 
+    answerKey: 
   hue: {r: 0.53976583, g: 1, b: 0, a: 1}
   articleLayout: 0

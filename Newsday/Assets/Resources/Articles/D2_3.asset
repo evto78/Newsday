@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3afb2448c0e5e419c50c90314c17d4, type: 3}
+  m_Name: D2_3
+  m_EditorClassIdentifier: Assembly-CSharp::ArticleData
+  headline: Mississauga Residents Report "Ghost Stuttering" in Local Tech Hub
+  image: {fileID: 0}
+  author: 'Dr. Chris '
+  date: 2026/01/20
+  bodyText: "Tech enthusiasts in the Heartland area have reported a bizarre phenomenon
+    where digital displays, including projectors and high-end gaming monitors, are
+    experiencing \"frame-hiccups\" at exactly 3:00 AM. <link=\u201DD31\u201D>Experts
+    suggest it may be related to a local BIOS update gone wrong or a massive surge
+    in the regional power grid. </link>\r\n\"I was just trying to deposit some money\"
+    said one local resident. \"Suddenly, the screen stuttered, my mouse started double-clicking
+    on its own, and my RGB lighting turned dark and 'underground'. It was cool, but
+    I couldn't finish my work.\"\r\n<link=\u201DD32\u201D>The local service board
+    suggests that anyone experiencing these issues should check their motherboard
+    firmware or ensure their \"Wireless Display\" features are correctly installed.
+    </link>\"It\u2019s likely just a glitch in the simulation,\" a spokesperson added."
+  id: 8
+  misinfo:
+  - location: 4
+    inArticleText: Experts suggest it may be related to a local BIOS update gone
+      wrong or a massive surge in the regional power grid.
+    linkID: D31
+    type: 6
+    checklist: 
+    checkListItems: 
+    answerKey: 
+  - location: 4
+    inArticleText: 'The local service board suggests that anyone experiencing these
+      issues should check their motherboard firmware or ensure their "Wireless Display"
+      features are correctly installed. '
+    linkID: D32
+    type: 6
+    checklist: 
+    checkListItems: 
+    answerKey: 
+  hue: {r: 0.9811321, g: 0.44891423, b: 0.8144808, a: 1}
+  articleLayout: 0

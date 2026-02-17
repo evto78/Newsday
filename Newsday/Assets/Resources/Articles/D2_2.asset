@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3afb2448c0e5e419c50c90314c17d4, type: 3}
+  m_Name: D2_2
+  m_EditorClassIdentifier: Assembly-CSharp::ArticleData
+  headline: Nuka-Cola Quantum Shortage Hits the Mojave
+  image: {fileID: 0}
+  author: Nancy M
+  date: 2026/01/22
+  bodyText: "Vegas residents are waking up to empty vending machines this week as
+    Nuka-Cola Corporation confirms a massive supply chain disruption. The signature
+    glowing blue soda, known for its high caffeine and isotope content, has become
+    a rare commodity following a raid on a shipping caravan near Primm.\r\n\"I haven't
+    slept in three days, and my glow is starting to fade,\" said one local prospector
+    outside the Tops Casino. \"If I don't get my Quantum fix soon, I might have to
+    switch to Sunset Sarsaparilla, and we all know that stuff is just root beer for
+    cowards.\"\r\n<link=\u201DD21\u201D> A corporate representative blamed \"local
+    raider interference\" and \"logistical nightmares regarding the handling of radioactive
+    materials,\" but promised that a fresh shipment is currently under heavy guard
+    and should arrive by the end of the month. </link> Prices on the secondary \"Cap-Market\"
+    have already tripled.\r\n"
+  id: 7
+  misinfo:
+  - location: 4
+    inArticleText: A corporate representative blamed "local raider interference"
+      and "logistical nightmares regarding the handling of radioactive materials,"
+      but promised that a fresh shipment is currently under heavy guard and should
+      arrive by the end of the month.
+    linkID: D21
+    type: 6
+    checklist: 
+    checkListItems: 
+    answerKey: 
+  hue: {r: 0.4575472, g: 0.9016938, b: 1, a: 1}
+  articleLayout: 0

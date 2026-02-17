@@ -20,4 +20,17 @@ public class ArticleData : ScriptableObject
 
     [Header("Apparance")]
     public Color hue = Color.red;
+
+    [Header("Boogle Search Responses")]
+    public string BS_headline;
+    public Sprite BS_image;
+    public string BS_author;
+    public string BS_date;
+    public string BS_bodyText;
+
+
+    public string boogleSearchReturn() {
+        if (date == "") ;
+        return "";
+    }
 }

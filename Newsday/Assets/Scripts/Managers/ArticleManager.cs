@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -35,42 +36,57 @@ public class ArticleManager : MonoBehaviour
             ElementClicked(clickedElement, "");
         }
     }
+
+    public string getLastClicked()
+    {
+        if (textWasLastClicked) return textClicked.text;
+        return imageClicked.sprite.name;
+    }
+
+    private bool textWasLastClicked = false;
+    
     public void ElementClicked(GameObject element, string text)
     {
         imageClicked.sprite = null; textClicked.text = "";
-        if (text != "")
+        if(text != "")
         {
             textClicked.text = text;
+            textWasLastClicked = true;
+            return;
         }
-        else
-        {
-            switch (element.name)
+        switch (element.name)
             {
                 case "Headline":
                     textClicked.text = currentArticle.headline;
+                    textWasLastClicked = true;
                     break;
                 case "Date":
                     textClicked.text = currentArticle.date;
+                    textWasLastClicked = true;
                     break;
                 case "Author":
                     textClicked.text = currentArticle.author;
+                    textWasLastClicked = true;
                     break;
                 case "Image":
                     imageClicked.sprite = currentArticle.image;
+                    textWasLastClicked = false;
                     break;
                 case "CloseTab":
                     textClicked.text = "Close Tab";
                     break;
-            }
-        }
+            } 
     }
     private bool IsPointerOverUIElement(List<RaycastResult> eventSystemRaysastResults)
     {
         for (int index = 0; index < eventSystemRaysastResults.Count; index++)
         {
             RaycastResult curRaysastResult = eventSystemRaysastResults[index];
-            if (curRaysastResult.gameObject.tag == "Clickable")
-            { clickedElement = curRaysastResult.gameObject; return true; }
+            if (curRaysastResult.gameObject.tag == "Clickable")//checks to see if the tag is clickable
+            { 
+                clickedElement = curRaysastResult.gameObject; 
+                return true; 
+            }
         }
         return false;
     }

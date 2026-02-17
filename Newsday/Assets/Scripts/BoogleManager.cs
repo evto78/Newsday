@@ -3,8 +3,10 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
 using Unity.VisualScripting;
+using System.Runtime.CompilerServices;
 public class BoogleManager : MonoBehaviour
 {
+    [SerializeField] private ArticleManager articleManager;
 
     [SerializeField] private Slider baseSlider, searchSlider;
     [SerializeField] private AnimationCurve loadingCurve;
@@ -36,10 +38,18 @@ public class BoogleManager : MonoBehaviour
         unloadAssets();
     }
 
-
+    [SerializeField] TMP_Text mainSearchTextField, subSearchTextField;
+    public void updateSearchBarText()
+    {
+        string engineText = articleManager.getLastClicked();
+        mainSearchTextField.text = engineText;
+        subSearchTextField.text = engineText;
+    }
 
     void Update()
     {
+        if(Input.GetMouseButtonDown(0)) updateSearchBarText();
+
         //update the current progress of the loading bar if 
         if (loading)
         {

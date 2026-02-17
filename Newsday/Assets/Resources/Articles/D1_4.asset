@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3afb2448c0e5e419c50c90314c17d4, type: 3}
+  m_Name: D1_4
+  m_EditorClassIdentifier: Assembly-CSharp::ArticleData
+  headline: Michael De Santa claims electric cars now finally viable
+  image: {fileID: 21300000, guid: 937872e39d3e1a74ea05eb0741e73228, type: 3}
+  author: George De Santa
+  date: 2026/01/20
+  bodyText: "Michael De Santa, an Investor who invested in Pfister and Pegassi, who
+    are both now out with their second line of Electric cars, after their first lines
+    failed.\r\n\u201CYou can already see the increase in air quality in South Los
+    Santos after the first shipments of cars were sent to the city!\u201D Says Michael
+    D. Santa.\r\nA scientist from the Environment board of Los Santos, staying anonymous,
+    says that the production energy requirements have gone down, but the cars still
+    use a lot of energy to charge the cars, which might not necessarily mean better,
+    even though it is better than before.\u201D\r\nMichael De Santa responds to this
+    on his new Switter post \u2013 \u201CThey clearly don\u2019t know what they\u2019re
+    talking about! I have personally seen the cars myself; I KNOW that they are good
+    for the environment! F**k you, who gives a f**k about the board anyway? Everyone
+    knows that they are paid off by Pfister! Those rats are always out to get us!\u201D\r\nA
+    representative from Pfister claims that they have done no such thing, and that
+    these are false claims from D. Santa.\r\n"
+  id: 4
+  misinfo: []
+  hue: {r: 0, g: 0.95578814, b: 1, a: 1}
+  articleLayout: 0

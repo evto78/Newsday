@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3afb2448c0e5e419c50c90314c17d4, type: 3}
+  m_Name: D1_2
+  m_EditorClassIdentifier: Assembly-CSharp::ArticleData
+  headline: "NCR\u2019s Big Coffee claims coffee is going down in price"
+  image: {fileID: 21300000, guid: 507a3e91cbc7f18448fa17d702588473, type: 3}
+  author: Hank Mclean
+  date: 2026/01/17
+  bodyText: "Big Coffee \u2013 corporate giants such as BarStucks, Him Tortons, DcMonalds,
+    Cesnaf\xE9 and Bunkin Bonuts report that coffee production has increased after
+    trade restrictions have eased between NCR and The Brotherhood. \r\nOne representative
+    from BarStucks claims that they will have the biggest drop in their coffee price,
+    but are projected to retain profits, if not increase them. \r\nDcMonalds, Him
+    Tortons, Cesnafe are following the same, dropping coffee prices.\r\nControversially,
+    Bunkin Bonuts are keeping their coffee prices the same, claiming that their coffee
+    is as cheap as it gets. A representative from Bunkin says \u201CWe are as cheap
+    as it gets, but we still provide the best quality in our coffee.\u201D\r\n"
+  id: 2
+  misinfo: []
+  hue: {r: 0.53976583, g: 1, b: 0, a: 1}
+  articleLayout: 0

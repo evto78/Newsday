@@ -39,6 +39,7 @@ MonoBehaviour:
     type: 6
     checklist: 
     checkListItems: 
-    answerKey: 
+    answerKey: 04000000
   hue: {r: 0.4575472, g: 0.9016938, b: 1, a: 1}
   articleLayout: 0
+  answer: 010000000100000001000000010000000100000001000000

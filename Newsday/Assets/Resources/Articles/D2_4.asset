@@ -39,14 +39,15 @@ MonoBehaviour:
     type: 6
     checklist: 
     checkListItems: 
-    answerKey: 
+    answerKey: 04000000
   - location: 3
     inArticleText: Void Relics to create an artificial shortage before the next Prime
       Access launch.
     linkID: D42
-    type: 6
+    type: 0
     checklist: 
     checkListItems: 
-    answerKey: 
+    answerKey: 01000000
   hue: {r: 1, g: 0.8216106, b: 0.5424528, a: 1}
   articleLayout: 0
+  answer: 010000000100000001000000010000000100000001000000

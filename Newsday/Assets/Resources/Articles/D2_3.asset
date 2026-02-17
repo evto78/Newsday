@@ -36,15 +36,16 @@ MonoBehaviour:
     type: 6
     checklist: 
     checkListItems: 
-    answerKey: 
+    answerKey: 04000000
   - location: 4
     inArticleText: 'The local service board suggests that anyone experiencing these
       issues should check their motherboard firmware or ensure their "Wireless Display"
       features are correctly installed. '
     linkID: D32
-    type: 6
+    type: 0
     checklist: 
     checkListItems: 
-    answerKey: 
+    answerKey: 01000000
   hue: {r: 0.9811321, g: 0.44891423, b: 0.8144808, a: 1}
   articleLayout: 0
+  answer: 010000000100000001000000010000000100000001000000

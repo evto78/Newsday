@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3afb2448c0e5e419c50c90314c17d4, type: 3}
+  m_Name: D2_5
+  m_EditorClassIdentifier: Assembly-CSharp::ArticleData
+  headline: Subnautica Explorers Discover "Dead Zone" Radio Signal
+  image: {fileID: 0}
+  author: Alterra
+  date: 2026/01/25
+  bodyText: "Alterra Corporation has issued a mandatory stay-away order for the Crater\u2019s
+    edge following the interception of a rhythmic, low-frequency signal. Long-range
+    scanners originally flagged the sound as a Reaper Leviathan migration,<link=\"D51>
+    but further analysis revealed that it is just how deeper fish communicate.</link>\r\n\"It
+    shouldn't be possible,\" said one lead xenobiologist. \"There is no power source
+    out there, yet the signal is coming from 500 meters down. It sounds like someone
+    left a waterproof speaker in the Void.\"\r\nWhile some divers believe it\u2019s
+    a precursor artifact, local conspiracy theorists on the Aurora suggest it\u2019s
+    a rogue \"Ghost Leviathan\" that has somehow evolved to mimic the sound of 21st-century
+    underground rap. Alterra has reminded all employees that investigating the signal
+    is a fireable offense and will result in the immediate forfeiture of their end-of-year
+    credits.\r\n"
+  id: 10
+  misinfo:
+  - location: 4
+    inArticleText: but further analysis revealed that it is just how deeper fish
+      communicate
+    linkID: D51
+    type: 0
+    checklist: 
+    checkListItems: 
+    answerKey: 
+  hue: {r: 0.7706035, g: 0.7216981, b: 1, a: 1}
+  articleLayout: 0

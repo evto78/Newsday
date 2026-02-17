@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3afb2448c0e5e419c50c90314c17d4, type: 3}
+  m_Name: D1_1
+  m_EditorClassIdentifier: Assembly-CSharp::ArticleData
+  headline: Fire Crews and Trauma Team International respond to house fire in Alpha
+    Corp District
+  image: {fileID: 21300000, guid: 9cb7132dc4cf64043897997072a383e3, type: 3}
+  author: Sarah McCain
+  date: 2026/01/19
+  bodyText: "Fire tore through a home in Arasaka district midday on Monday.\r\n\u201CI
+    was taking a nap, and I heard sirens outside and some commotion, and then I smelt
+    the smoke and ran out, to see ****\u2019s house on fire.\u201D\r\n4 out of 5
+    residents of the house are safe. The 5th resident has experienced some minor
+    burns, but was treated quickly, thanks to the quick response from the fire crew.
+    \r\n\u201CWe are thankful to the firecrew that was able to save most of our belongings,
+    and we are grateful to be part of the Trauma Team International\u2019s Platinum
+    Executive plan and their quick response time\u201D\r\nTrauma team confirmed that
+    they were quick to the response as soon as they noticed the spike in their client\u2019s
+    heart rate, and the response time was exactly 2 minutes 54 seconds.\r\n\u201CMan,
+    you ain\u2019t know how bad I was panicking when I saw my crib lit up man. Hopefully
+    It wasn\u2019t because of the deodorant I spilled on my heater man, that woulda
+    been stupid!\u201D A high school student from the resident\u2019s family claims.\r\n\r\n"
+  id: 1
+  misinfo: []
+  hue: {r: 1, g: 0, b: 0, a: 1}
+  articleLayout: 0

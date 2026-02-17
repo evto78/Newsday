@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3afb2448c0e5e419c50c90314c17d4, type: 3}
+  m_Name: D1_5
+  m_EditorClassIdentifier: Assembly-CSharp::ArticleData
+  headline: HEADLINE
+  image: {fileID: 21300000, guid: e6ff73ea359de4e4a819e7a20c8b154f, type: 3}
+  author: Hank Mclean
+  date: 2026/01/17
+  bodyText: "\u201CWe have dealt with the protestors who did ruin the piece, and
+    we are deeply heartbroken that such a historic piece has been ruined.\u201D says
+    the spokesperson for the Gallery.\r\nThe gallery is now re-opened, with all art
+    pieces, except for the Lona Misa. \r\nIn an interview, Gan Vogh\u2019s grandson,
+    when asked what is going to happen to the Lona Misa, says that \u201CWe are going
+    to take back the painting and keep it (the painting) and salvage what can be
+    salvaged from it. I don\u2019t want to let go of the history in my family.\u201D\r\nArt
+    Critics and fans on Switter are vocal about this. One Switter user voices their
+    opinion on this \u201CAs good as the Lisa Mona is, it is the best way to send
+    a message. Not something I necessarily agree with, but now the whole world is
+    talking about the protestors, which means they got what they wanted \u2013 bringing
+    attention to the oil crisis.\u201D\r\n"
+  id: 5
+  misinfo: []
+  hue: {r: 0.8641329, g: 0, b: 1, a: 1}
+  articleLayout: 0

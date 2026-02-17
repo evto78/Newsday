@@ -75,6 +75,7 @@ public class BoogleManager : MonoBehaviour
     //DONE
     public void loadingBar()
     {
+        unloadAssets();
         if (baseUI.activeInHierarchy)
         {
             baseSlider.value = loadingCurve.Evaluate((Time.time - startTime) / loadingDuration);
@@ -146,7 +147,7 @@ public class BoogleManager : MonoBehaviour
         //article.get_info
 
         //whats the type of information that we want to have selected. 
-        selectionType = InformationType.TEXT;//to be commented out. 
+        
         
         
         switch (selectionType)

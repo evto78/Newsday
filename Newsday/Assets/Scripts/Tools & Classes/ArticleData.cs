@@ -25,4 +25,8 @@ public class ArticleData : ScriptableObject
     //Large can hold ~1100 characters in body text
     public enum Layout { SmallImage, LargeImageLeft, LargeImageRight}
     public Layout articleLayout = Layout.SmallImage;
+
+    public int[] answer = {1, 1, 1, 1, 1, 1};
+
+    
 }

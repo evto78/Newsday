@@ -7896,6 +7896,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471873091}
   m_CullTransparentMesh: 1
+--- !u!1 &1475136321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1475136323}
+  - component: {fileID: 1475136322}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1475136322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475136321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6589abafb2e36044189f83cd391bf07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  checklist: {fileID: 2071351315}
+  articleManager: {fileID: 156820019}
+--- !u!4 &1475136323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475136321}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 949.28625, y: 153.15514, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1517613800
 GameObject:
   m_ObjectHideFlags: 0
@@ -10070,6 +10116,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1475136322}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: validateResponse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1881752802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10494,6 +10552,18 @@ MonoBehaviour:
       - m_Target: {fileID: 156820019}
         m_TargetAssemblyTypeName: ArticleManager, Assembly-CSharp
         m_MethodName: NextArticle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1475136322}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: validateResponse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11792,17 +11862,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3852952258670361526, guid: be86c979ec5d042449bae20c6f9df11e, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5369014011264949909, guid: be86c979ec5d042449bae20c6f9df11e, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5689072393994793013, guid: be86c979ec5d042449bae20c6f9df11e, type: 3}
       propertyPath: m_fontSize
       value: 26.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091309724706224417, guid: be86c979ec5d042449bae20c6f9df11e, type: 3}
+      propertyPath: m_fontSize
+      value: 59.1
       objectReference: {fileID: 0}
     - target: {fileID: 6240099312168744584, guid: be86c979ec5d042449bae20c6f9df11e, type: 3}
       propertyPath: m_fontSize
       value: 26.45
       objectReference: {fileID: 0}
+    - target: {fileID: 6403680132218903159, guid: be86c979ec5d042449bae20c6f9df11e, type: 3}
+      propertyPath: m_fontSize
+      value: 59.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7733427935347829368, guid: be86c979ec5d042449bae20c6f9df11e, type: 3}
       propertyPath: m_fontSize
       value: 26.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926886164871710632, guid: be86c979ec5d042449bae20c6f9df11e, type: 3}
+      propertyPath: m_fontSize
+      value: 59.1
       objectReference: {fileID: 0}
     - target: {fileID: 8713974785752370067, guid: be86c979ec5d042449bae20c6f9df11e, type: 3}
       propertyPath: m_Name
@@ -11827,3 +11917,4 @@ SceneRoots:
   - {fileID: 156820020}
   - {fileID: 1134439083}
   - {fileID: 1582289083}
+  - {fileID: 1475136323}

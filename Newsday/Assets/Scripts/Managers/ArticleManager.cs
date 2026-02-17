@@ -153,4 +153,10 @@ public class ArticleManager : MonoBehaviour
         EventSystem.current.RaycastAll(eventData, raysastResults);
         return raysastResults;
     }
+
+    public int[] getCurrentArticleValues()
+    {
+        return currentArticle.answer;
+    }
+
 }

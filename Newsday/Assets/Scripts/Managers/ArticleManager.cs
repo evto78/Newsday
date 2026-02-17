@@ -40,14 +40,20 @@ public class ArticleManager : MonoBehaviour
             boogleManager.updateSearchBarText(getLastClicked());
 
             //preps the results
-            if(currentArticle.boogleSearchReturn(getLastClicked()) == "-1"){//if its an image then select the image result
-                boogleManager.imageResult(currentArticle.getBoogleImage());
-            }
-            else
-            {
-                boogleManager.textResult(currentArticle.boogleSearchReturn(getLastClicked()));
-            }
+            updateSearchResult();
             
+        }
+    }
+
+    public void updateSearchResult()
+    {
+        if (currentArticle.boogleSearchReturn(getLastClicked()) == "-1")
+        {//if its an image then select the image result
+            boogleManager.imageResult(currentArticle.getBoogleImage());
+        }
+        else
+        {
+            boogleManager.textResult(currentArticle.boogleSearchReturn(getLastClicked()));
         }
     }
 
@@ -66,6 +72,10 @@ public class ArticleManager : MonoBehaviour
         {
             textClicked.text = text;
             textWasLastClicked = true;
+            boogleManager.updateSearchBarText(getLastClicked());
+
+            //preps the results
+            updateSearchResult();
             return;
         }
         switch (element.name)

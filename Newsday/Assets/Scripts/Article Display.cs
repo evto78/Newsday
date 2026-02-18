@@ -182,7 +182,7 @@ public class ArticleDisplay : MonoBehaviour
     }
     private void ClickInlineText(string keyword, TMP_Text tmp)
     {
-        Debug.Log("Clicked : " + keyword);
+        //Debug.Log("Clicked : " + keyword);
         articleManager.ElementClicked(tmp.gameObject, keyword);
 
         //Highlight clicked text
@@ -195,7 +195,7 @@ public class ArticleDisplay : MonoBehaviour
     }
     private void HoverInlineText(string keyword, TMP_Text tmp)
     {
-        Debug.Log("Hovering over : " + keyword);
+        //Debug.Log("Hovering over : " + keyword);
         if(cursorManager == null) { return; }
         cursorManager.ChangeCursor(1);
 
@@ -212,7 +212,7 @@ public class ArticleDisplay : MonoBehaviour
     }
     private void StopHoverInlineText(string keyword, TMP_Text tmp)
     {
-        Debug.Log("Stopped hovering over : " + keyword);
+        //Debug.Log("Stopped hovering over : " + keyword);
         if(cursorManager == null) { return; }
         cursorManager.ChangeCursor(0);
 

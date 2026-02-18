@@ -3,8 +3,10 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Rendering;
 using Unity.VisualScripting;
+using System.Runtime.CompilerServices;
 public class BoogleManager : MonoBehaviour
 {
+    
 
     [SerializeField] private Slider baseSlider, searchSlider;
     [SerializeField] private AnimationCurve loadingCurve;
@@ -36,10 +38,18 @@ public class BoogleManager : MonoBehaviour
         unloadAssets();
     }
 
-
+    [SerializeField] TMP_Text mainSearchTextField, subSearchTextField;
+    public void updateSearchBarText(string engineText)
+    {
+        mainSearchTextField.text = engineText;
+        subSearchTextField.text = engineText;
+    }
 
     void Update()
     {
+        
+        
+
         //update the current progress of the loading bar if 
         if (loading)
         {
@@ -48,10 +58,24 @@ public class BoogleManager : MonoBehaviour
 
     }
 
+    public void imageResult(Sprite result)
+    {
+        selectionType = InformationType.IMAGE;
+        tempImgResult = result;
+    }
+
+    public void textResult(string result)
+    {
+        selectionType = InformationType.TEXT;
+        tempTextResult = result;
+    }
+    Sprite tempImgResult;
+    string tempTextResult;
 
     //DONE
     public void loadingBar()
     {
+        unloadAssets();
         if (baseUI.activeInHierarchy)
         {
             baseSlider.value = loadingCurve.Evaluate((Time.time - startTime) / loadingDuration);
@@ -90,9 +114,11 @@ public class BoogleManager : MonoBehaviour
         {
             case InformationType.TEXT:
                 text.SetActive(true);
+                text.GetComponent<TextMeshProUGUI>().text = tempTextResult;
                 break;
             case InformationType.IMAGE:
                 image.SetActive(true);
+                image.GetComponent<Image>().sprite = tempImgResult;
                 break;
         }
     }
@@ -121,7 +147,7 @@ public class BoogleManager : MonoBehaviour
         //article.get_info
 
         //whats the type of information that we want to have selected. 
-        selectionType = InformationType.TEXT;//to be commented out. 
+        
         
         
         switch (selectionType)

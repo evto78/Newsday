@@ -1,6 +1,7 @@
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.U2D;
 
 [CreateAssetMenu(fileName = "New Article", menuName = "Article/Create New Article")]
 [System.Serializable]
@@ -20,6 +21,7 @@ public class ArticleData : ScriptableObject
 
     [Header("Apparance")]
     public Color hue = Color.red;
+
     //Small Image is 300x300 ratio, Large Image is 650x300 ratio
     //Small can hold ~1300 characters in body text
     //Large can hold ~1100 characters in body text
@@ -29,4 +31,25 @@ public class ArticleData : ScriptableObject
     public int[] answer = {1, 1, 1, 1, 1, 1};
 
     
+    [Header("Boogle Search Responses")]
+    public string BS_headline;
+    public Sprite BS_image;
+    public string BS_author;
+    public string BS_date;
+    public string bodyFact;
+    public string BS_bodyText;
+
+
+    public Sprite getBoogleImage()
+    {
+        return BS_image;
+    }
+    public string boogleSearchReturn(string search) {
+        if (date == search) return BS_date;
+        if(headline == search) return BS_headline;
+        if(image.name == search) return "-1";
+        if (author == search) return BS_author;
+        if (bodyFact == search) return BS_bodyText;
+        return "";
+    }
 }

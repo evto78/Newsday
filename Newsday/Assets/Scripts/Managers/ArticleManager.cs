@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,9 +15,13 @@ public class ArticleManager : MonoBehaviour
     public List<ArticleData> allValidArticles; //All articles with an id above -1, sorted by id
     public ArticleData currentArticle;
     [Header("Debug / Testing")]
+
     public ArticleData overrideArticle; //Ignore proper behavior and instead load this article
     public Image imageClicked; //Image to change to the last image clicked
     public TextMeshProUGUI textClicked; //Text to change to the last text clicked
+
+    [SerializeField] private BoogleManager boogleManager;   
+
     private void Awake() { SetUp(); }
     void SetUp()
     {
@@ -100,39 +105,72 @@ public class ArticleManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && IsPointerOverUIElement(GetEventSystemRaycastResults()))
         {
             ElementClicked(clickedElement, "");
+            //gets the text to display in the boogle search bar
+            boogleManager.updateSearchBarText(getLastClicked());
+
+            //preps the results
+            updateSearchResult();
+            
         }
     }
-    public void ElementClicked(GameObject element, string text)
-    {
-        //When something is clicked, set the image to the clicked image, and set the text to the clicked text
-        if (imageClicked == null || textClicked == null) { return; }
 
-        imageClicked.sprite = null; textClicked.text = "";
-        if (text != "")
-        {
-            textClicked.text = text;
+    public void updateSearchResult()
+    {
+
+        if (currentArticle.boogleSearchReturn(getLastClicked()) == "-1")
+        {//if its an image then select the image result
+            boogleManager.imageResult(currentArticle.getBoogleImage());
+
         }
         else
         {
-            switch (element.name)
+            boogleManager.textResult(currentArticle.boogleSearchReturn(getLastClicked()));
+        }
+    }
+
+    public string getLastClicked()
+    {
+        if (textWasLastClicked) return textClicked.text;
+        return imageClicked.sprite.name;
+    }
+
+    private bool textWasLastClicked = false;
+    
+    public void ElementClicked(GameObject element, string text)
+    {
+        imageClicked.sprite = null; textClicked.text = "";
+        if(text != "")
+        {
+            textClicked.text = text;
+            textWasLastClicked = true;
+            boogleManager.updateSearchBarText(getLastClicked());
+
+            //preps the results
+            updateSearchResult();
+            return;
+        }
+        switch (element.name)
             {
                 case "Headline":
                     textClicked.text = currentArticle.headline;
+                    textWasLastClicked = true;
                     break;
                 case "Date":
                     textClicked.text = currentArticle.date;
+                    textWasLastClicked = true;
                     break;
                 case "Author":
                     textClicked.text = currentArticle.author;
+                    textWasLastClicked = true;
                     break;
                 case "Image":
                     imageClicked.sprite = currentArticle.image;
+                    textWasLastClicked = false;
                     break;
                 case "CloseTab":
                     textClicked.text = "Close Tab";
                     break;
-            }
-        }
+            } 
     }
     //Check if the cursor is over a ui element with the clickable tag
     private bool IsPointerOverUIElement(List<RaycastResult> eventSystemRaysastResults)
@@ -140,8 +178,11 @@ public class ArticleManager : MonoBehaviour
         for (int index = 0; index < eventSystemRaysastResults.Count; index++)
         {
             RaycastResult curRaysastResult = eventSystemRaysastResults[index];
-            if (curRaysastResult.gameObject.tag == "Clickable")
-            { clickedElement = curRaysastResult.gameObject; return true; }
+            if (curRaysastResult.gameObject.tag == "Clickable")//checks to see if the tag is clickable
+            { 
+                clickedElement = curRaysastResult.gameObject; 
+                return true; 
+            }
         }
         return false;
     }

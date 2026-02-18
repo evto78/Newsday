@@ -27,7 +27,7 @@ MonoBehaviour:
     suggests that anyone experiencing these issues should check their motherboard
     firmware or ensure their \"Wireless Display\" features are correctly installed.
     </link>\"It\u2019s likely just a glitch in the simulation,\" a spokesperson added."
-  id: 7
+  id: 2
   misinfo:
   - location: 4
     inArticleText: Experts suggest it may be related to a local BIOS update gone

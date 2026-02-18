@@ -18,15 +18,16 @@ MonoBehaviour:
   date: 2026/01/20
   bodyText: "Tech enthusiasts in the Heartland area have reported a bizarre phenomenon
     where digital displays, including projectors and high-end gaming monitors, are
-    experiencing \"frame-hiccups\" at exactly 3:00 AM. <link=\u201DD31\u201D>Experts
+    experiencing \"frame-hiccups\" at exactly 3:00 AM. <b><link=\u201DD31\u201D>Experts
     suggest it may be related to a local BIOS update gone wrong or a massive surge
-    in the regional power grid. </link>\r\n\"I was just trying to deposit some money\"
-    said one local resident. \"Suddenly, the screen stuttered, my mouse started double-clicking
-    on its own, and my RGB lighting turned dark and 'underground'. It was cool, but
-    I couldn't finish my work.\"\r\n<link=\u201DD32\u201D>The local service board
-    suggests that anyone experiencing these issues should check their motherboard
-    firmware or ensure their \"Wireless Display\" features are correctly installed.
-    </link>\"It\u2019s likely just a glitch in the simulation,\" a spokesperson added."
+    in the regional power grid. </link></b>\r\n\"I was just trying to deposit some
+    money\" said one local resident. \"Suddenly, the screen stuttered, my mouse started
+    double-clicking on its own, and my RGB lighting turned dark and 'underground'.
+    It was cool, but I couldn't finish my work.\"\r\n<b><link=\u201DD32\u201D>The
+    local service board suggests that anyone experiencing these issues should check
+    their motherboard firmware or ensure their \"Wireless Display\" features are
+    correctly installed. </link></b>\"It\u2019s likely just a glitch in the simulation,\"
+    a spokesperson added."
   id: 2
   misinfo:
   - location: 4

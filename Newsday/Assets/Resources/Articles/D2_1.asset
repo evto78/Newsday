@@ -17,16 +17,16 @@ MonoBehaviour:
   author: Jonesy Steinberg
   date: 2026/01/21
   bodyText: "Vindertech Corp announced Tuesday that the massive canopy over dusty
-    divoy excavation is now operational. The project, that faced several delays <link=\u201DD11\u201D>due
+    divoy excavation is now operational. The project, that faced several delays <b><link=\u201DD11\u201D>due
     to meteoric activity and mysterious purple energy spikes, was finished 3 weeks
-    early thanks to \u201Cenhanced labor protocols\u201D </link>\r\n\u201Cwe wanted
-    to ensure that researches have a roof over their heads before the next storm
-    cycle hits\u201D, said a vindertech site lead.\r\nRetail Row residents have expressed
-    concerns about noise levels and water pollution. One resident, who wished to
-    remain anonymous, stated: \u201CIt\u2019s not just the construction noise, but
-    later at night you can hear this low humming sound coming from the pit. <link=\u201DD12\u201D>
-    My TV keeps glitching to a llama-shaped test pattern. I just wanna sleep.\u201D
-    </link>\r\n"
+    early thanks to \u201Cenhanced labor protocols\u201D </link>\r</b>\n\u201Cwe
+    wanted to ensure that researches have a roof over their heads before the next
+    storm cycle hits\u201D, said a vindertech site lead.\r\nRetail Row residents
+    have expressed concerns about noise levels and water pollution. One resident,
+    who wished to remain anonymous, stated: \u201CIt\u2019s not just the construction
+    noise, but later at night you can hear this low humming sound coming from the
+    pit. <b><link=\u201DD12\u201D> My TV keeps glitching to a llama-shaped test pattern.
+    I just wanna sleep.\u201D </link>\r<b>\n"
   id: 0
   misinfo:
   - location: 4

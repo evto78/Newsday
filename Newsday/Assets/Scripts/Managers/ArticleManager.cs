@@ -47,35 +47,28 @@ public class ArticleManager : MonoBehaviour
         if(overrideArticle == null) { currentArticle = allValidArticles[0]; }
         else { currentArticle = overrideArticle; }
 
-        //Set the article layout to be the correct shape according to the current article
-        foreach (ArticleDisplay display in articleWindows) { display.gameObject.SetActive(false); }
-        switch (currentArticle.articleLayout)
-        {
-            case ArticleData.Layout.SmallImage: articleWindows[0].gameObject.SetActive(true); articleWindows[0].LoadArticle(currentArticle, this); break;
-            case ArticleData.Layout.LargeImageLeft: articleWindows[1].gameObject.SetActive(true); articleWindows[1].LoadArticle(currentArticle, this); break;
-            case ArticleData.Layout.LargeImageRight: articleWindows[2].gameObject.SetActive(true); articleWindows[2].LoadArticle(currentArticle, this); break;
-        }
-        
+        setupArticle();
     }
+
     public void NextArticle()
     {
         if (currentArticle.id == allValidArticles.Count - 1) { return; }
         currentArticle = allValidArticles[currentArticle.id + 1];
 
-        //Set the article layout to be the correct shape according to the current article
-        foreach (ArticleDisplay display in articleWindows) { display.gameObject.SetActive(false); }
-        switch (currentArticle.articleLayout)
-        {
-            case ArticleData.Layout.SmallImage: articleWindows[0].gameObject.SetActive(true); articleWindows[0].LoadArticle(currentArticle, this); break;
-            case ArticleData.Layout.LargeImageLeft: articleWindows[1].gameObject.SetActive(true); articleWindows[1].LoadArticle(currentArticle, this); break;
-            case ArticleData.Layout.LargeImageRight: articleWindows[2].gameObject.SetActive(true); articleWindows[2].LoadArticle(currentArticle, this); break;
-        }
+        setupArticle();
     }
+
     public void PreviousArticle()
     {
         if (currentArticle.id == 0) { return; }
         currentArticle = allValidArticles[currentArticle.id - 1];
 
+        setupArticle();
+        
+    }
+
+    public void setupArticle()
+    {
         //Set the article layout to be the correct shape according to the current article
         foreach (ArticleDisplay display in articleWindows) { display.gameObject.SetActive(false); }
         switch (currentArticle.articleLayout)
@@ -85,19 +78,14 @@ public class ArticleManager : MonoBehaviour
             case ArticleData.Layout.LargeImageRight: articleWindows[2].gameObject.SetActive(true); articleWindows[2].LoadArticle(currentArticle, this); break;
         }
     }
+
     public void SetArticle(int id)
     {
         currentArticle = allValidArticles[id];
 
-        //Set the article layout to be the correct shape according to the current article
-        foreach (ArticleDisplay display in articleWindows) { display.gameObject.SetActive(false); }
-        switch (currentArticle.articleLayout)
-        {
-            case ArticleData.Layout.SmallImage: articleWindows[0].gameObject.SetActive(true); articleWindows[0].LoadArticle(currentArticle, this); break;
-            case ArticleData.Layout.LargeImageLeft: articleWindows[1].gameObject.SetActive(true); articleWindows[1].LoadArticle(currentArticle, this); break;
-            case ArticleData.Layout.LargeImageRight: articleWindows[2].gameObject.SetActive(true); articleWindows[2].LoadArticle(currentArticle, this); break;
-        }
+        setupArticle();
     }
+
     GameObject clickedElement;
     private void Update()
     {
@@ -109,12 +97,12 @@ public class ArticleManager : MonoBehaviour
             boogleManager.updateSearchBarText(getLastClicked());
 
             //preps the results
-            updateSearchResult();
+            updateBoogleSearchResult();
             
         }
     }
 
-    public void updateSearchResult()
+    public void updateBoogleSearchResult()
     {
 
         if (currentArticle.boogleSearchReturn(getLastClicked()) == "-1")
@@ -146,7 +134,7 @@ public class ArticleManager : MonoBehaviour
             boogleManager.updateSearchBarText(getLastClicked());
 
             //preps the results
-            updateSearchResult();
+            updateBoogleSearchResult();
             return;
         }
         switch (element.name)

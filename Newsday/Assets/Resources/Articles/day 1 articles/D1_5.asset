@@ -28,7 +28,14 @@ MonoBehaviour:
     a message. Not something I necessarily agree with, but now the whole world is
     talking about the protestors, which means they got what they wanted \u2013 bringing
     attention to the oil crisis.\u201D\r\n"
-  id: 5
+  id: 4
   misinfo: []
   hue: {r: 0.8641329, g: 0, b: 1, a: 1}
   articleLayout: 0
+  answer: 010000000100000001000000010000000100000001000000
+  BS_headline: 
+  BS_image: {fileID: 0}
+  BS_author: 
+  BS_date: 
+  bodyFact: 
+  BS_bodyText: 

@@ -23,12 +23,12 @@ MonoBehaviour:
     slept in three days, and my glow is starting to fade,\" said one local prospector
     outside the Tops Casino. \"If I don't get my Quantum fix soon, I might have to
     switch to Sunset Sarsaparilla, and we all know that stuff is just root beer for
-    cowards.\"\r\n<link=\u201DD21\u201D> A corporate representative blamed \"local
+    cowards.\"\r\n<b><link=\u201DD21\u201D> A corporate representative blamed \"local
     raider interference\" and \"logistical nightmares regarding the handling of radioactive
     materials,\" but promised that a fresh shipment is currently under heavy guard
-    and should arrive by the end of the month. </link> Prices on the secondary \"Cap-Market\"
-    have already tripled.\r\n"
-  id: 7
+    and should arrive by the end of the month. </link>   </b>Prices on the secondary
+    \"Cap-Market\" have already tripled.\r\n"
+  id: 1
   misinfo:
   - location: 4
     inArticleText: A corporate representative blamed "local raider interference"
@@ -43,3 +43,12 @@ MonoBehaviour:
   hue: {r: 0.4575472, g: 0.9016938, b: 1, a: 1}
   articleLayout: 0
   answer: 010000000100000001000000010000000100000001000000
+  BS_headline: 
+  BS_image: {fileID: 0}
+  BS_author: 
+  BS_date: 
+  bodyFact: A corporate representative blamed "local raider interference" and "logistical
+    nightmares regarding the handling of radioactive materials," but promised that
+    a fresh shipment is currently under heavy guard and should arrive by the end
+    of the month.
+  BS_bodyText: 

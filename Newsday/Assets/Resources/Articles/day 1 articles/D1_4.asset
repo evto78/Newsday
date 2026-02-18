@@ -30,7 +30,14 @@ MonoBehaviour:
     knows that they are paid off by Pfister! Those rats are always out to get us!\u201D\r\nA
     representative from Pfister claims that they have done no such thing, and that
     these are false claims from D. Santa.\r\n"
-  id: 4
+  id: 3
   misinfo: []
   hue: {r: 0, g: 0.95578814, b: 1, a: 1}
   articleLayout: 0
+  answer: 010000000100000001000000010000000100000001000000
+  BS_headline: 
+  BS_image: {fileID: 0}
+  BS_author: 
+  BS_date: 
+  bodyFact: 
+  BS_bodyText: 

@@ -20,15 +20,15 @@ MonoBehaviour:
     Platinum-to-Credits exchange rate plummeted by 40%. The crash was triggered by
     an anonymous trader who flooded the market with thousands of \"Condition Overload\"
     mods, claiming they found a \"farming exploit\" involving a specific room in
-    the Orokin Derelict that hasn't been patched in years.\r\n<link=\u201DD41\u201D>
+    the Orokin Derelict that hasn't been patched in years.\r\n<b><link=\u201DD41\u201D>
     \"The economy is in shambles,\" says a prominent Maroo's Bazaar merchant. \"I
     traded a Prime Set for three Ducats and a handful of Nano Spores yesterday. If
     the Lotus doesn't step in and regulate the drop rates, we\u2019re going to be
-    back to bartering with raw Rubedo by next week.\"</link>\r\nSecurity at the relays
-    has been tightened to prevent \"pump and dump\" schemes, but rumors persist that
-    a secret syndicate is hoarding all the <link=\"D42>Void Relics to create an artificial
-    shortage before the next Prime Access launch.</link>\r\n"
-  id: 9
+    back to bartering with raw Rubedo by next week.\"</link></b>\r\nSecurity at the
+    relays has been tightened to prevent \"pump and dump\" schemes, but rumors persist
+    that a secret syndicate is hoarding all the <b><link=\"D42>Void Relics to create
+    an artificial shortage before the next Prime Access launch.</link>\r</b>\n"
+  id: 3
   misinfo:
   - location: 3
     inArticleText: "\"The economy is in shambles,\" says a prominent Maroo's Bazaar
@@ -51,3 +51,9 @@ MonoBehaviour:
   hue: {r: 1, g: 0.8216106, b: 0.5424528, a: 1}
   articleLayout: 0
   answer: 010000000100000001000000010000000100000001000000
+  BS_headline: 
+  BS_image: {fileID: 0}
+  BS_author: 
+  BS_date: 
+  bodyFact: 
+  BS_bodyText: 

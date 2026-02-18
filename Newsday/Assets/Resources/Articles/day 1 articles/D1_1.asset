@@ -30,7 +30,14 @@ MonoBehaviour:
     you ain\u2019t know how bad I was panicking when I saw my crib lit up man. Hopefully
     It wasn\u2019t because of the deodorant I spilled on my heater man, that woulda
     been stupid!\u201D A high school student from the resident\u2019s family claims.\r\n\r\n"
-  id: 1
+  id: 0
   misinfo: []
   hue: {r: 1, g: 0, b: 0, a: 1}
   articleLayout: 0
+  answer: 010000000100000001000000010000000100000001000000
+  BS_headline: 
+  BS_image: {fileID: 0}
+  BS_author: 
+  BS_date: 
+  bodyFact: 
+  BS_bodyText: 

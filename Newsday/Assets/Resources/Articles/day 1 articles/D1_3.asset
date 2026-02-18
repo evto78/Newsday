@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: D1_3
   m_EditorClassIdentifier: Assembly-CSharp::ArticleData
   headline: New public library opens in Pleasant Park
-  image: {fileID: 21300000, guid: 3947491964d0a26448e54599497cd9c3, type: 3}
+  image: {fileID: 21300000, guid: 58dcd85cea4b05f4191513eb8dddf666, type: 3}
   author: Jonesy Steinberg
   date: 2026/01/01
   bodyText: "After Tilted Tower\u2019s Mayor agreed to send 200 million dollars to

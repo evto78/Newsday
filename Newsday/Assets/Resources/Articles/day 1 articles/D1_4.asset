@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: D1_4
   m_EditorClassIdentifier: Assembly-CSharp::ArticleData
   headline: Michael De Santa claims electric cars now finally viable
-  image: {fileID: 21300000, guid: 937872e39d3e1a74ea05eb0741e73228, type: 3}
+  image: {fileID: 21300000, guid: e8fa139e45583ef4ba58c2e47e71e28e, type: 3}
   author: George De Santa
   date: 2026/01/20
   bodyText: "Michael De Santa, an Investor who invested in Pfister and Pegassi, who

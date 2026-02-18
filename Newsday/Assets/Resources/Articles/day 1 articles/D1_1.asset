@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ArticleData
   headline: Fire Crews and Trauma Team International respond to house fire in Alpha
     Corp District
-  image: {fileID: 21300000, guid: 9cb7132dc4cf64043897997072a383e3, type: 3}
+  image: {fileID: 21300000, guid: 9fe7beb21758cc246bca12965a7cb71d, type: 3}
   author: Sarah McCain
   date: 2026/01/19
   bodyText: "Fire tore through a home in Arasaka district midday on Monday.\r\n\u201CI

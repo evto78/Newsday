@@ -25,7 +25,7 @@ MonoBehaviour:
     Bunkin Bonuts are keeping their coffee prices the same, claiming that their coffee
     is as cheap as it gets. A representative from Bunkin says \u201CWe are as cheap
     as it gets, but we still provide the best quality in our coffee.\u201D\r\n"
-  id: 2
+  id: 1
   misinfo:
   - location: 1
     inArticleText: 
@@ -36,3 +36,10 @@ MonoBehaviour:
     answerKey: 
   hue: {r: 0.53976583, g: 1, b: 0, a: 1}
   articleLayout: 0
+  answer: 010000000100000001000000010000000100000001000000
+  BS_headline: 
+  BS_image: {fileID: 0}
+  BS_author: 
+  BS_date: 
+  bodyFact: 
+  BS_bodyText: 

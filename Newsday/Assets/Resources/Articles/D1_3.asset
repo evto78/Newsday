@@ -22,7 +22,14 @@ MonoBehaviour:
     third space of many to be constructed, with the football field in the center
     now being turned into a stadium for concerts, and more.\r\nThe library contains
     3 floors, 40000 books and a small restaurant \u2013 operated by Tomato Town.\r\n"
-  id: 3
+  id: 2
   misinfo: []
   hue: {r: 0.9388454, g: 1, b: 0, a: 1}
   articleLayout: 0
+  answer: 010000000100000001000000010000000100000001000000
+  BS_headline: 
+  BS_image: {fileID: 0}
+  BS_author: 
+  BS_date: 
+  bodyFact: 
+  BS_bodyText: 

@@ -767,6 +767,7 @@ MonoBehaviour:
   overrideArticle: {fileID: 0}
   imageClicked: {fileID: 506034123}
   textClicked: {fileID: 520880449}
+  boogleManager: {fileID: 1966347193}
 --- !u!4 &156820020
 Transform:
   m_ObjectHideFlags: 0
@@ -12299,6 +12300,8 @@ MonoBehaviour:
   baseSearchTime: 1
   text: {fileID: 520880447}
   image: {fileID: 506034121}
+  mainSearchTextField: {fileID: 140676087}
+  subSearchTextField: {fileID: 1030936358}
 --- !u!1 &1973351170
 GameObject:
   m_ObjectHideFlags: 0

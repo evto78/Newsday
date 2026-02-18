@@ -28,7 +28,7 @@ MonoBehaviour:
     underground rap. Alterra has reminded all employees that investigating the signal
     is a fireable offense and will result in the immediate forfeiture of their end-of-year
     credits.\r\n"
-  id: 10
+  id: 9
   misinfo:
   - location: 4
     inArticleText: but further analysis revealed that it is just how deeper fish
@@ -41,3 +41,9 @@ MonoBehaviour:
   hue: {r: 0.7706035, g: 0.7216981, b: 1, a: 1}
   articleLayout: 0
   answer: 010000000100000001000000010000000100000001000000
+  BS_headline: 
+  BS_image: {fileID: 0}
+  BS_author: 
+  BS_date: 
+  bodyFact: 
+  BS_bodyText: 

@@ -27,7 +27,7 @@ MonoBehaviour:
     later at night you can hear this low humming sound coming from the pit. <link=\u201DD12\u201D>
     My TV keeps glitching to a llama-shaped test pattern. I just wanna sleep.\u201D
     </link>\r\n"
-  id: 6
+  id: 5
   misinfo:
   - location: 4
     inArticleText: due to meteoric activity and mysterious purple energy spikes,
@@ -48,3 +48,9 @@ MonoBehaviour:
   hue: {r: 1, g: 0, b: 0, a: 1}
   articleLayout: 0
   answer: 010000000100000001000000010000000100000001000000
+  BS_headline: 
+  BS_image: {fileID: 0}
+  BS_author: 
+  BS_date: 
+  bodyFact: 
+  BS_bodyText: 

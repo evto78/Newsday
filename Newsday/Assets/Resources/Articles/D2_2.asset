@@ -28,7 +28,7 @@ MonoBehaviour:
     materials,\" but promised that a fresh shipment is currently under heavy guard
     and should arrive by the end of the month. </link> Prices on the secondary \"Cap-Market\"
     have already tripled.\r\n"
-  id: 7
+  id: 6
   misinfo:
   - location: 4
     inArticleText: A corporate representative blamed "local raider interference"
@@ -43,3 +43,9 @@ MonoBehaviour:
   hue: {r: 0.4575472, g: 0.9016938, b: 1, a: 1}
   articleLayout: 0
   answer: 010000000100000001000000010000000100000001000000
+  BS_headline: 
+  BS_image: {fileID: 0}
+  BS_author: 
+  BS_date: 
+  bodyFact: 
+  BS_bodyText: 

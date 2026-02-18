@@ -15,7 +15,7 @@ MonoBehaviour:
   headline: HEADLINE
   image: {fileID: 21300000, guid: c73ac274c7f63db41bf1c791f43c4afa, type: 3}
   author: Hank Mclean
-  date: 2026/01/17
+  date: 2026/10/10
   bodyText: "\u201CWe have dealt with the protestors who did ruin the piece, and
     we are deeply heartbroken that such a historic piece has been ruined.\u201D says
     the spokesperson for the Gallery.\r\nThe gallery is now re-opened, with all art
@@ -33,9 +33,9 @@ MonoBehaviour:
   hue: {r: 0.8641329, g: 0, b: 1, a: 1}
   articleLayout: 0
   answer: 010000000100000001000000010000000100000001000000
-  BS_headline: 
-  BS_image: {fileID: 0}
-  BS_author: 
-  BS_date: 
+  BS_headline: That is just the title
+  BS_image: {fileID: 21300000, guid: c73ac274c7f63db41bf1c791f43c4afa, type: 3}
+  BS_author: They don't work for the newspaper.
+  BS_date: That is today's date
   bodyFact: 
   BS_bodyText: 

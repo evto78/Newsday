@@ -16,7 +16,7 @@ MonoBehaviour:
     Corp District
   image: {fileID: 21300000, guid: 9fe7beb21758cc246bca12965a7cb71d, type: 3}
   author: Sarah McCain
-  date: 2026/01/19
+  date: 2026/10/10
   bodyText: "Fire tore through a home in Arasaka district midday on Monday.\r\n\u201CI
     was taking a nap, and I heard sirens outside and some commotion, and then I smelt
     the smoke and ran out, to see ****\u2019s house on fire.\u201D\r\n4 out of 5
@@ -35,9 +35,9 @@ MonoBehaviour:
   hue: {r: 1, g: 0, b: 0, a: 1}
   articleLayout: 0
   answer: 010000000100000001000000010000000100000001000000
-  BS_headline: 
-  BS_image: {fileID: 0}
-  BS_author: 
-  BS_date: 
+  BS_headline: That is just the title
+  BS_image: {fileID: 21300000, guid: 9fe7beb21758cc246bca12965a7cb71d, type: 3}
+  BS_author: They work for the newspaper
+  BS_date: That is today's date
   bodyFact: 
   BS_bodyText: 

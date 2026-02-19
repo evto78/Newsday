@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: D2_1
   m_EditorClassIdentifier: Assembly-CSharp::ArticleData
   headline: Mega-Shed Corporation in Dusty Divot completed ahead of schedule
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: cf0fa9f59060bed4c8cc9b5fbcacbf81, type: 3}
   author: Jonesy Steinberg
   date: 2026/01/21
   bodyText: "Vindertech Corp announced Tuesday that the massive canopy over dusty

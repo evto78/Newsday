@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: D2_5
   m_EditorClassIdentifier: Assembly-CSharp::ArticleData
   headline: Subnautica Explorers Discover "Dead Zone" Radio Signal
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 60209d3efe6a6ba4d94f619288f8d8e7, type: 3}
   author: Alterra
   date: 2026/01/25
   bodyText: "Alterra Corporation has issued a mandatory stay-away order for the Crater\u2019s

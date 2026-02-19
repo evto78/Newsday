@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: D2_3
   m_EditorClassIdentifier: Assembly-CSharp::ArticleData
   headline: Mississauga Residents Report "Ghost Stuttering" in Local Tech Hub
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 1313e3b28d14ca34da56eea9cff10893, type: 3}
   author: 'Dr. Chris '
   date: 2026/01/20
   bodyText: "Tech enthusiasts in the Heartland area have reported a bizarre phenomenon

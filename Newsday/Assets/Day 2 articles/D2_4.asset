@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: D2_4
   m_EditorClassIdentifier: Assembly-CSharp::ArticleData
   headline: Warframe Market Crashes as "Rare Mod" Supply Skyrockets
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: a59e7f0ab6ed9634c8e2f4b2bd1f701e, type: 3}
   author: Rebecca Doe
   date: 2026/01/24
   bodyText: "The Tenno Relay Council is in a state of panic this morning after the

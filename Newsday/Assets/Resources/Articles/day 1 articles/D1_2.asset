@@ -36,7 +36,7 @@ MonoBehaviour:
     answerKey: 
   hue: {r: 0.53976583, g: 1, b: 0, a: 1}
   articleLayout: 0
-  answer: 010000000100000001000000010000000100000001000000
+  answer: 010000000000000001000000010000000100000001000000
   BS_headline: That is just the title
   BS_image: {fileID: 21300000, guid: 2683602e296ab6c43af9ab50a334b465, type: 3}
   BS_author: They don't work for the newspaper.

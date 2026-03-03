@@ -20,6 +20,7 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private float sceneBufferWidth = 0;
 
     [SerializeField] private GameObject [] _sceneUI;
+    [SerializeField] private GameObject[] _sceneAssets;
     [SerializeField] private bool exactPosition = false;
     [SerializeField] private Vector2[] _scenePosition;
 
@@ -46,8 +47,10 @@ public class CameraManager : MonoBehaviour
 
         Debug.Log(_scene);
         turnOffAllUI();//turn off the current GUI
-        
+        turnOffSceneAssets();
+
         _sceneUI[scene].SetActive(true);//turn on our desired GUI
+        _sceneAssets[scene].SetActive(true);
 
         _scene = scene;//update the current scene position
     }
@@ -63,6 +66,14 @@ public class CameraManager : MonoBehaviour
         for(int i = 0; i < _sceneUI.Length; i++)
         {
             _sceneUI[i].SetActive(false);
+        }
+    }
+
+    public void turnOffSceneAssets()
+    {
+        for (int i = 0; i < _sceneAssets.Length; i++)
+        {
+            _sceneAssets[i].SetActive(false);
         }
     }
 }

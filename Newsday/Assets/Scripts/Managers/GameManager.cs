@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     
     public void validateResponse()
     {
+
         if (!compareArticle())
         {
             //Debug.Log("You did something wrong");
@@ -40,6 +41,9 @@ public class GameManager : MonoBehaviour
             //Debug.Log("You  got it right!!!!");
             StartCoroutine(displayMessage(tempWin));
         }
+
+        //clear the current checklist
+        checklist.clearChecklist();
     }
 
     public bool compareArticle()

@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Checklist checklist;
     [SerializeField] private ArticleManager articleManager;
     [SerializeField] private GameObject tempWin, tempLose;
+    [SerializeField] private CameraManager cameraManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

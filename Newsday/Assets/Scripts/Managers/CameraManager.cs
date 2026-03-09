@@ -45,7 +45,7 @@ public class CameraManager : MonoBehaviour
             _camera.transform.position = new Vector3(xCoordinate, _camera.transform.position.y, _camera.transform.position.z);
         }
 
-        Debug.Log(_scene);
+        //Debug.Log(_scene);
         turnOffAllUI();//turn off the current GUI
         turnOffSceneAssets();
 

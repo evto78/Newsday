@@ -63,6 +63,8 @@ public class GameManager : MonoBehaviour
     
     public void validateResponse(bool approved)
     {
+        
+        cameraManager.jumpToScene(0);
         if (!compareArticle(approved))
         {
             //Debug.Log("You did something wrong");

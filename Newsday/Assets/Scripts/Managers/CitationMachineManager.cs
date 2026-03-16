@@ -35,7 +35,7 @@ public class CitationMachineManager : MonoBehaviour
         printerSlip.GetComponent<Button>().enabled = false;
 
         //testing script to see if it prints
-        printCitation("This is a test");
+        //printCitation("This is a test");
     }
 
     //this is called in the game manager when a mistake has been made and a citation needs to be printed.

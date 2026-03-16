@@ -34,6 +34,7 @@ MonoBehaviour:
     checklist: 
     checkListItems: 
     answerKey: 
+  ReasonCodes: c9000000
   hue: {r: 0.53976583, g: 1, b: 0, a: 1}
   articleLayout: 0
   answer: 010000000000000001000000010000000100000001000000

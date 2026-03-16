@@ -188,4 +188,9 @@ public class ArticleManager : MonoBehaviour
         return currentArticle.answer;
     }
 
+    public int[] getArticleReasonCodes()
+    {
+        return currentArticle.ReasonCodes;
+    }
+
 }

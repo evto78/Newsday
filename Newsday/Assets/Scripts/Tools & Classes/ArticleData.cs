@@ -18,6 +18,7 @@ public class ArticleData : ScriptableObject
     [Header("DATA")]
     public int id = -1;
     public List<MisinfoData> misinfo = new List<MisinfoData>();
+    public int[] ReasonCodes;
 
     [Header("Apparance")]
     public Color hue = Color.red;

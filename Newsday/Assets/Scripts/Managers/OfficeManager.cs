@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OfficeManager : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class OfficeManager : MonoBehaviour
     public Rigidbody2D usbRb;
     public ClickAndDragPhysics usbScript;
     public Transform usbSlot;
+
+    public Button computerButton;
     private void Start()
     {
         usbRb.bodyType = RigidbodyType2D.Dynamic;
@@ -32,5 +35,9 @@ public class OfficeManager : MonoBehaviour
         usbRb.bodyType = RigidbodyType2D.Static;
         usbRb.transform.localEulerAngles = Vector3.zero;
         usbRb.transform.position = usbSlot.transform.position - Vector3.right * 0.7f;
+    }
+    private void Update()
+    {
+        computerButton.interactable = ((usbRb.bodyType == RigidbodyType2D.Static) && (usbRb.gameObject.activeSelf));
     }
 }

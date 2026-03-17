@@ -25,6 +25,11 @@ MonoBehaviour:
     Bunkin Bonuts are keeping their coffee prices the same, claiming that their coffee
     is as cheap as it gets. A representative from Bunkin says \u201CWe are as cheap
     as it gets, but we still provide the best quality in our coffee.\u201D\r\n"
+  messegesIfApproved:
+  - Bunkin Bonuts has always had bad coffee so idk what they were talking about in
+    that one article...
+  - Coffee is getting cheaper? Might start getting 2 every morning!
+  messegesIfDenied: []
   id: 1
   misinfo:
   - location: 1

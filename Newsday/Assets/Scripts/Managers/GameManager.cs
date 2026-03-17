@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private Checklist checklist;
     [SerializeField] private ArticleManager articleManager;
+    [SerializeField] private SubwaySocialMediaManager socialMediaManager;
     [SerializeField] private GameObject tempWin, tempLose;
     [SerializeField] private CameraManager cameraManager;
     [SerializeField] private CitationMachineManager citationMachineManager;
@@ -63,7 +64,6 @@ public class GameManager : MonoBehaviour
     
     public void validateResponse(bool approved)
     {
-        
         cameraManager.jumpToScene(0);
         if (!compareArticle(approved))
         {
@@ -76,6 +76,11 @@ public class GameManager : MonoBehaviour
             //Debug.Log("You  got it right!!!!");
             StartCoroutine(displayMessage(tempWin));
         }
+
+        //Social Media Reaction, que the appropiete messeges
+        ArticleData publishedArticle = articleManager.currentArticle;
+        if (approved && publishedArticle.messegesIfApproved.Count > 0) { socialMediaManager.quedMesseges.AddRange(publishedArticle.messegesIfApproved); }
+        else if (!approved && publishedArticle.messegesIfDenied.Count > 0) { socialMediaManager.quedMesseges.AddRange(publishedArticle.messegesIfDenied); }
     }
 
     private void printCitation()

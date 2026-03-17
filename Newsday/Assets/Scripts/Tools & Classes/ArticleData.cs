@@ -15,6 +15,10 @@ public class ArticleData : ScriptableObject
     [TextArea(6, 10)]
     public string bodyText = "";
 
+    [Header("Social Media Influence")]
+    public List<string> messegesIfApproved;
+    public List<string> messegesIfDenied;
+
     [Header("DATA")]
     public int id = -1;
     public List<MisinfoData> misinfo = new List<MisinfoData>();

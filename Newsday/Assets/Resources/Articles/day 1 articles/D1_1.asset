@@ -30,6 +30,10 @@ MonoBehaviour:
     you ain\u2019t know how bad I was panicking when I saw my crib lit up man. Hopefully
     It wasn\u2019t because of the deodorant I spilled on my heater man, that woulda
     been stupid!\u201D A high school student from the resident\u2019s family claims.\r\n\r\n"
+  messegesIfApproved:
+  - Just read that house fire article... I need to fix my smoke detector...
+  - If my kid burned down my house, id make them pay for it LOL
+  messegesIfDenied: []
   id: 0
   misinfo: []
   ReasonCodes: 360100009a010000fe010000

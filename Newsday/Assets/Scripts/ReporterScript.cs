@@ -7,11 +7,13 @@ public class ReporterScript : MonoBehaviour
 {
     public OfficeManager officeManager;
     public GameObject usb;
-    StringTyper speechBubble;
     public int dialogeIndex;
     public int articleNumber;
     public List<string> introDialoge;
     public List<articleDialoge> articleSpesificDialoge;
+    [SerializeField] private StringTyper speechBubble;
+
+
     [System.Serializable]
     public class articleDialoge
     {
@@ -21,7 +23,6 @@ public class ReporterScript : MonoBehaviour
     {
         articleNumber = 0;
         dialogeIndex = 0;
-        speechBubble = GetComponentInChildren<StringTyper>();
         speechBubble.StartTyping(introDialoge[0]);
     }
     private void OnEnable()

@@ -8,10 +8,8 @@ public class StringTyper : MonoBehaviour
     TextMeshProUGUI txt;
     public float typingSpeed = 10f;
     public bool isTyping;
-    void Start()
-    {
-        txt = GetComponent<TextMeshProUGUI>();
-    }
+    
+
     public void StartTyping(string input)
     {
         if (isTyping) { return; }
@@ -22,7 +20,9 @@ public class StringTyper : MonoBehaviour
         isTyping = true;
 
         string typedText = "";
-        txt.text = typedText;
+        txt = gameObject.GetComponent<TextMeshProUGUI>();
+        txt.text = "";
+
 
         yield return new WaitForEndOfFrame();
 

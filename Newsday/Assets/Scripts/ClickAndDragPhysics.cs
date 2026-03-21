@@ -12,6 +12,8 @@ public class ClickAndDragPhysics : MonoBehaviour
     Collider2D myCollider;
     Camera cam;
     public bool holding = false;
+    public int hitBoxID = -1;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

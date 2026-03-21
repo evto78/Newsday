@@ -44,7 +44,13 @@ public class ArticleData : ScriptableObject
     public string bodyFact;
     public string BS_bodyText;
 
+    [Header("Reporter Dialogue")]
+    [SerializeField] private string[] reporterDialogue;
 
+    public string[] getReporterDialogue()
+    {
+        return reporterDialogue;
+    }
     public Sprite getBoogleImage()
     {
         return BS_image;

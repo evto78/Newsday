@@ -36,6 +36,5 @@ public class StringTyper : MonoBehaviour
         }
 
         isTyping = false;
-        yield return null;
     }
 }

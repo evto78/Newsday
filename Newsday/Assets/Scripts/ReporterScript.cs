@@ -5,7 +5,7 @@ using TMPro;
 
 public class ReporterScript : MonoBehaviour
 {
-
+    public OfficeManager officeManager;
     public GameObject usb;
     public int dialogeIndex;
     public int articleNumber;
@@ -33,13 +33,6 @@ public class ReporterScript : MonoBehaviour
             dialogeIndex = 0;
             speechBubble.StartTyping(introDialoge[0]);
         }
-    }
-
-    public void playIntroDialogue()
-    {
-        articleNumber++;
-        dialogeIndex = 0;
-        speechBubble.StartTyping(introDialoge[0]);
     }
     void Update()
     {

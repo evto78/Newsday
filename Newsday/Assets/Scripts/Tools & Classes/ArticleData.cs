@@ -21,6 +21,7 @@ public class ArticleData : ScriptableObject
 
     [Header("DATA")]
     public int id = -1;
+    public List<MisinfoData> misinfo = new List<MisinfoData>();
     public int[] ReasonCodes;
 
     [Header("Apparance")]
@@ -43,13 +44,7 @@ public class ArticleData : ScriptableObject
     public string bodyFact;
     public string BS_bodyText;
 
-    [Header("Reporter Dialogue")]
-    [SerializeField] private string[] reporterDialogue;
 
-    public string[] getReporterDialogue()
-    {
-        return reporterDialogue;   
-    }
     public Sprite getBoogleImage()
     {
         return BS_image;

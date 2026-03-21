@@ -36,7 +36,6 @@ public class ReporterScript : MonoBehaviour
     }
     void Update()
     {
-        //wait till the end of typing is done;
         if (!speechBubble.isTyping && (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Return)))
         {
             switch (articleNumber)

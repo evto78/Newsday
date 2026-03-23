@@ -9,14 +9,21 @@ using System.Linq;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private Checklist checklist;
-    [SerializeField] private ArticleManager articleManager;
-    [SerializeField] private SubwaySocialMediaManager socialMediaManager;
     [SerializeField] private GameObject tempWin, tempLose;
+    [SerializeField] private GameObject subwayButton;
+
+    [Header("Managers")]
+    [SerializeField] private ArticleManager articleManager;
     [SerializeField] private CameraManager cameraManager;
     [SerializeField] private CitationMachineManager citationMachineManager;
-
+    [SerializeField] private SubwaySocialMediaManager socialMediaManager;
+    
     private OfficeManager officeManager;
     private ClockTimer timer;
+
+    [Header("Article Related")]
+    [SerializeField] private int articlesPerDay = 5;
+    private int articlesDoneToday = 0;
 
     private List<int> reasonCodeFound = new List<int>();
     private static string reasonCodeCSVpath = "/Resources/CSV/ReasonCodeCSV.csv";
@@ -54,6 +61,7 @@ public class GameManager : MonoBehaviour
     {
         tempWin.SetActive(false);
         tempLose.SetActive(false);
+        subwayButton.SetActive(false);
         readCSVFile();
 
         //get the office manager thats attached to this object
@@ -93,9 +101,15 @@ public class GameManager : MonoBehaviour
         ArticleData publishedArticle = articleManager.currentArticle;
         if (approved && publishedArticle.messegesIfApproved.Count > 0) { socialMediaManager.quedMesseges.AddRange(publishedArticle.messegesIfApproved); }
         else if (!approved && publishedArticle.messegesIfDenied.Count > 0) { socialMediaManager.quedMesseges.AddRange(publishedArticle.messegesIfDenied); }
+        articlesDoneToday++;
+        if (articlesDoneToday == articlesPerDay) showSubwayButton();
     }
 
-    
+    private void showSubwayButton()
+    {
+        subwayButton.SetActive(true);
+        articlesDoneToday = 0;
+    }
 
     private void printCitation()
     {

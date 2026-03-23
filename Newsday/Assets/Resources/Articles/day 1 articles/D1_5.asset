@@ -28,8 +28,11 @@ MonoBehaviour:
     a message. Not something I necessarily agree with, but now the whole world is
     talking about the protestors, which means they got what they wanted \u2013 bringing
     attention to the oil crisis.\u201D\r\n"
+  messegesIfApproved: []
+  messegesIfDenied: []
   id: 4
   misinfo: []
+  ReasonCodes: 
   hue: {r: 0.8641329, g: 0, b: 1, a: 1}
   articleLayout: 0
   answer: 010000000000000001000000010000000100000001000000
@@ -39,3 +42,7 @@ MonoBehaviour:
   BS_date: That is today's date
   bodyFact: 
   BS_bodyText: 
+  reporterSpriteIndex: 0
+  reporterDialogue:
+  - Mathew
+  - Mathew

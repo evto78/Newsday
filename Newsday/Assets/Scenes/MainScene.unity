@@ -5575,11 +5575,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 732162490}
   - {fileID: 1416783459}
+  - {fileID: 171947369}
   - {fileID: 1901462935}
   - {fileID: 789334530}
-  - {fileID: 732162490}
-  - {fileID: 171947369}
   - {fileID: 1136921183}
   m_Father: {fileID: 876654606}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6426,7 +6426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 732162490}
   m_Layer: 5
-  m_Name: TEMP jump to subway
+  m_Name: Subway Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6447,10 +6447,10 @@ RectTransform:
   - {fileID: 881636429}
   m_Father: {fileID: 614264312}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -15, y: -14}
-  m_SizeDelta: {x: 292.179, y: 52.7178}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 146.09003, y: 145}
+  m_SizeDelta: {x: 292.17896, y: 52.717773}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &752224396
 GameObject:
@@ -7999,7 +7999,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.7149211, b: 0.47358483, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -12311,12 +12311,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   checklist: {fileID: 2071351315}
-  articleManager: {fileID: 156820019}
-  socialMediaManager: {fileID: 285195864}
   tempWin: {fileID: 1280226553}
   tempLose: {fileID: 222617004}
+  subwayButton: {fileID: 732162489}
+  articleManager: {fileID: 156820019}
   cameraManager: {fileID: 589049676}
   citationMachineManager: {fileID: 1323047802}
+  socialMediaManager: {fileID: 285195864}
+  articlesPerDay: 5
 --- !u!4 &1475136323
 Transform:
   m_ObjectHideFlags: 0

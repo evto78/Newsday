@@ -50,4 +50,6 @@ public class ClickAndDragPhysics : MonoBehaviour
             rb.linearVelocity = (tarPos - curPos)*2500f*Time.deltaTime;
         }
     }
+
+  
 }

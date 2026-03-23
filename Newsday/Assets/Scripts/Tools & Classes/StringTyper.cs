@@ -41,7 +41,6 @@ public class StringTyper : MonoBehaviour
                 isTalking = false;
             }
         }
-
     }
 
     //starts the conversation and writes the first 

@@ -213,6 +213,9 @@ public class OfficeManager : MonoBehaviour
     {
         usbStick.transform.position = usbSpawnPnt.position;
         usbStick.SetActive(true);
+        usbRb.bodyType = RigidbodyType2D.Dynamic;
+        usbScript.holding = false; usbRb.gravityScale = 1;
+        usbRb.angularDamping = 0.05f;
     }
 
     private void showDebuglines()

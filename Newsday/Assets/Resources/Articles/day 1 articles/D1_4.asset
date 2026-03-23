@@ -30,8 +30,11 @@ MonoBehaviour:
     knows that they are paid off by Pfister! Those rats are always out to get us!\u201D\r\nA
     representative from Pfister claims that they have done no such thing, and that
     these are false claims from D. Santa.\r\n"
+  messegesIfApproved: []
+  messegesIfDenied: []
   id: 3
   misinfo: []
+  ReasonCodes: 
   hue: {r: 0, g: 0.95578814, b: 1, a: 1}
   articleLayout: 0
   answer: 010000000100000001000000010000000100000001000000
@@ -41,3 +44,7 @@ MonoBehaviour:
   BS_date: That is today's date
   bodyFact: 
   BS_bodyText: 
+  reporterSpriteIndex: 0
+  reporterDialogue:
+  - Weirdo
+  - Weirdo

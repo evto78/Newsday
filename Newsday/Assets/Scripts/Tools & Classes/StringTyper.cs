@@ -28,33 +28,30 @@ public class StringTyper : MonoBehaviour
     private void Update()
     {
 
-        if (speech.Length-1 == speechIndex)
-        {
-            isTalking = false;
-        }
+        
 
         //if we in a conversation, and we are done typing out the message we start off at 0 thats why
         if (isTalking && !isTyping && (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Return)))
         {
             speechIndex++;
-            //Debug.Log(speechIndex);
+            Debug.Log(speechIndex);
             StartTyping(speech[speechIndex]);
+            if (speech.Length-1 == speechIndex)
+            {
+                isTalking = false;
+            }
         }
 
-        
-
-        //we were talking but now we stopped, we reset
-        if (speechIndex != 0 && !isTalking)
-        {
-            speechIndex = 0;
-        }
     }
 
     //starts the conversation and writes the first 
     public void startConversation(string []convo)
     {
+        Debug.Log(convo[0]);
+        speechIndex = 0;
         speech = convo;
         isTalking = true;
+        isTyping = false;
         StartTyping(speech[0]);
     }
 
@@ -79,8 +76,8 @@ public class StringTyper : MonoBehaviour
         bool quickType = false;
         foreach (char c in input)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Return) || quickType) { quickType = true; }
-            else { yield return new WaitForSeconds(1f / typingSpeed); }
+            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Return) || quickType) quickType = true;
+            else yield return new WaitForSeconds(1f / typingSpeed); 
             typedText += c;
             txt.text = typedText;
         }

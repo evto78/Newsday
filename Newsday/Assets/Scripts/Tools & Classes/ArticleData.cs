@@ -50,6 +50,7 @@ public class ArticleData : ScriptableObject
 
     public string[] getReporterDialogue()
     {
+        Debug.Log(reporterDialogue[0]);
         return reporterDialogue;
     }
     public Sprite getBoogleImage()

@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 80919607}
   - component: {fileID: 80919606}
   m_Layer: 5
-  m_Name: Button
+  m_Name: DoorButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.9973476, b: 0.79811317, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -564,7 +564,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 171947368}
+      - m_Target: {fileID: 1158903722}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -12360,9 +12360,9 @@ MonoBehaviour:
   ReporterBody: {fileID: 548140789}
   enterPoint: {fileID: 1064087367}
   exitPoint: {fileID: 125664215}
-  walkingTime: 10
+  walkingTime: 3
   stepHeight: 0.2
-  numOfSteps: 10
+  numOfSteps: 6
   usbStick: {fileID: 1687308838}
   usbSpawnPnt: {fileID: 111029763}
   usbSlot: {fileID: 101855127}
@@ -12370,6 +12370,7 @@ MonoBehaviour:
   SpeechBubble: {fileID: 1136921182}
   SpeechBubbleTxt: {fileID: 818608066}
   computerButton: {fileID: 1416783460}
+  doorButton: {fileID: 80919606}
 --- !u!114 &1475136325
 MonoBehaviour:
   m_ObjectHideFlags: 0

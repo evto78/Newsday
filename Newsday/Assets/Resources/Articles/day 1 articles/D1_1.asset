@@ -36,7 +36,7 @@ MonoBehaviour:
   messegesIfDenied: []
   id: 0
   misinfo: []
-  ReasonCodes: 360100009a010000fe010000
+  ReasonCodes: 
   hue: {r: 1, g: 0, b: 0, a: 1}
   articleLayout: 0
   answer: 010000000100000001000000010000000100000001000000
@@ -46,3 +46,8 @@ MonoBehaviour:
   BS_date: That is today's date
   bodyFact: 
   BS_bodyText: 
+  reporterSpriteIndex: 0
+  reporterDialogue:
+  - Hi I'm Sarah
+  - Here's my article
+  - It doesn't read this line

@@ -193,7 +193,9 @@ public class ArticleManager : MonoBehaviour
     }
     public string[] getCurrentArticleDialogue()
     {
-        return currentArticle.getReporterDialogue();
+        string[] temp = currentArticle.getReporterDialogue();
+        Debug.Log(temp[0]);
+        return temp;
     }
     public int getReporterSpriteIndex()
     {

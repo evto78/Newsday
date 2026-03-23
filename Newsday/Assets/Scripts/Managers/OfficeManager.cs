@@ -33,6 +33,7 @@ public class OfficeManager : MonoBehaviour
 
     [Space]
     public Button computerButton;
+    public Button doorButton;
     private void Start()
     {
 
@@ -123,6 +124,7 @@ public class OfficeManager : MonoBehaviour
     //DONE
     public void doorKnock()
     {
+       doorButton.interactable = false;
         if (!bossIntroDone) // our boss is breaking down the rules of the game
         {
             bossIntroDone = true;
@@ -149,15 +151,6 @@ public class OfficeManager : MonoBehaviour
 
         //2. Start talking
         SpeechBubble.SetActive(true);
-
-        /* We can't use a for loop cause we have to let the player decide on when to click next
-        //cycle through all the lines of dialogue
-        for(int i = 0; i < dialogue.Length; i++)
-        {
-            stringTyper.StartTyping(dialogue[i]);
-            while (stringTyper.isTyping) yield return null;
-        }
-        */
 
         //we start talking to the player
         stringTyper.startConversation(dialogue);
@@ -211,6 +204,8 @@ public class OfficeManager : MonoBehaviour
         while(walking) yield return null;
         //turn off reporter once they made it passed a certain point
         ReporterBody.SetActive(false);
+        //reactivate button
+        doorButton.interactable = true;
     }
 
     //DONE

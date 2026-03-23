@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int articlesPerDay = 5;
     private int articlesDoneToday = 0;
 
-    private List<int> reasonCodeFound = new List<int>();
+    private List<int> reasonCodeFound;
     private static string reasonCodeCSVpath = "/Resources/CSV/ReasonCodeCSV.csv";
     private static int [] reasonCodes;
     private static string [] reasonResponse;
@@ -101,6 +101,8 @@ public class GameManager : MonoBehaviour
         ArticleData publishedArticle = articleManager.currentArticle;
         if (approved && publishedArticle.messegesIfApproved.Count > 0) { socialMediaManager.quedMesseges.AddRange(publishedArticle.messegesIfApproved); }
         else if (!approved && publishedArticle.messegesIfDenied.Count > 0) { socialMediaManager.quedMesseges.AddRange(publishedArticle.messegesIfDenied); }
+        
+        //check to see if that was their last article
         articlesDoneToday++;
         if (articlesDoneToday == articlesPerDay) showSubwayButton();
     }
@@ -133,7 +135,7 @@ public class GameManager : MonoBehaviour
         int[] ArticleReasonCodes = articleManager.getArticleReasonCodes();
         int[] checklistValues = checklist.getItemValues();
         int[] articleValues = articleManager.getCurrentArticleValues();
-
+        reasonCodeFound = new List<int>();
         //check to see if they filled out the checklist correctly
         for(int i = 0; i < checklistValues.Length; i++)
         {

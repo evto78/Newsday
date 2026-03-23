@@ -58,6 +58,8 @@ public class CitationMachineManager : MonoBehaviour
     }
 
 
+
+
     //used for UI so that it closes
     public void closeCitation()
     {

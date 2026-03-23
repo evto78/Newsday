@@ -65,6 +65,7 @@ public class OfficeManager : MonoBehaviour
         usbRb.transform.localEulerAngles = Vector3.zero;
         usbRb.transform.position = usbSlot.transform.position - Vector3.right * 0.7f;
     }
+   
     private void Update()
     {
         computerButton.interactable = ((usbRb.bodyType == RigidbodyType2D.Static) && (usbRb.gameObject.activeSelf));
@@ -117,6 +118,7 @@ public class OfficeManager : MonoBehaviour
         dropUSB();
     }
 
+
     private bool bossIntroDone = false;
     //DONE
     public void doorKnock()
@@ -124,7 +126,7 @@ public class OfficeManager : MonoBehaviour
         if (!bossIntroDone) // our boss is breaking down the rules of the game
         {
             bossIntroDone = true;
-            StartCoroutine(newPersonCommingIn(bossIntroDialogue));
+            StartCoroutine(bossIntro(bossIntroDialogue));
         }
         else
         {
@@ -132,6 +134,42 @@ public class OfficeManager : MonoBehaviour
             StartCoroutine(newPersonCommingIn(articleManager.getCurrentArticleDialogue()));
         }
     } 
+
+    IEnumerator bossIntro(string[] dialogue)
+    {
+        //1. they walk in
+        //set up the position of the reporter and turn them on
+        ReporterBody.transform.position = enterPoint.transform.position;
+        ReporterBody.SetActive(true);
+
+        //walk from the left to the center of the screen
+        StartCoroutine(walkFromAToB(enterPoint.position, Vector2.Lerp(enterPoint.position, exitPoint.position, 0.5f)));
+
+        while (walking) yield return null;
+
+        //2. Start talking
+        SpeechBubble.SetActive(true);
+
+        /* We can't use a for loop cause we have to let the player decide on when to click next
+        //cycle through all the lines of dialogue
+        for(int i = 0; i < dialogue.Length; i++)
+        {
+            stringTyper.StartTyping(dialogue[i]);
+            while (stringTyper.isTyping) yield return null;
+        }
+        */
+
+        //we start talking to the player
+        stringTyper.startConversation(dialogue);
+
+        while (stringTyper.isTalking) yield return null;
+
+        //turn off the speech bubble when we are done talking
+        SpeechBubble.SetActive(false);
+
+        // 3. we walk off screen
+        StartCoroutine(exitReporter());
+    }
 
     //DONE
     IEnumerator walkFromAToB(Vector2 startingPoint, Vector2 endPoint)
@@ -159,7 +197,7 @@ public class OfficeManager : MonoBehaviour
 
     }
 
-    //DONE
+    //DONE - to be used in game manager
     public void reporterLeave()
     {   //turn off USB
         usbStick.SetActive(false);
@@ -170,9 +208,7 @@ public class OfficeManager : MonoBehaviour
     IEnumerator exitReporter()
     {
         StartCoroutine(walkFromAToB(Vector2.Lerp(enterPoint.position, exitPoint.position, 0.5f), exitPoint.position));
-        do {
-            yield return null;
-        }while (walking);
+        while(walking) yield return null;
         //turn off reporter once they made it passed a certain point
         ReporterBody.SetActive(false);
     }

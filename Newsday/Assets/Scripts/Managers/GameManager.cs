@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
         }
 
         //public void reporter leaves
-        
+        officeManager.reporterLeave();
 
         //Social Media Reaction, que the appropiete messeges
         ArticleData publishedArticle = articleManager.currentArticle;

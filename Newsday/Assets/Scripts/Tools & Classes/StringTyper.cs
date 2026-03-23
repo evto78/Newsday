@@ -37,7 +37,7 @@ public class StringTyper : MonoBehaviour
         if (isTalking && !isTyping && (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Return)))
         {
             speechIndex++;
-            Debug.Log(speechIndex);
+            //Debug.Log(speechIndex);
             StartTyping(speech[speechIndex]);
         }
 

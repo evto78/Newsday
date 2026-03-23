@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CameraManager cameraManager;
     [SerializeField] private CitationMachineManager citationMachineManager;
 
+    private OfficeManager officeManager;
+    private ClockTimer timer;
+
     private List<int> reasonCodeFound = new List<int>();
     private static string reasonCodeCSVpath = "/Resources/CSV/ReasonCodeCSV.csv";
     private static int [] reasonCodes;
@@ -52,8 +55,12 @@ public class GameManager : MonoBehaviour
         tempWin.SetActive(false);
         tempLose.SetActive(false);
         readCSVFile();
-    }
 
+        //get the office manager thats attached to this object
+        officeManager = GetComponent<OfficeManager>();
+
+        timer = GetComponent<ClockTimer>();
+    }
 
     IEnumerator displayMessage(GameObject result)
     {
@@ -64,7 +71,9 @@ public class GameManager : MonoBehaviour
     
     public void validateResponse(bool approved)
     {
+        //jumps back to the office scene
         cameraManager.jumpToScene(0);
+        
         if (!compareArticle(approved))
         {
             //Debug.Log("You did something wrong");
@@ -74,14 +83,19 @@ public class GameManager : MonoBehaviour
         else
         {
             //Debug.Log("You  got it right!!!!");
-            StartCoroutine(displayMessage(tempWin));
+            //StartCoroutine(displayMessage(tempWin));
         }
+
+        //public void reporter leaves
+        
 
         //Social Media Reaction, que the appropiete messeges
         ArticleData publishedArticle = articleManager.currentArticle;
         if (approved && publishedArticle.messegesIfApproved.Count > 0) { socialMediaManager.quedMesseges.AddRange(publishedArticle.messegesIfApproved); }
         else if (!approved && publishedArticle.messegesIfDenied.Count > 0) { socialMediaManager.quedMesseges.AddRange(publishedArticle.messegesIfDenied); }
     }
+
+    
 
     private void printCitation()
     {
@@ -98,7 +112,7 @@ public class GameManager : MonoBehaviour
         checklist.clearChecklist();
     }
 
-
+    
     //this checks the player if they submitted a correct article
     public bool compareArticle(bool approved)
     {

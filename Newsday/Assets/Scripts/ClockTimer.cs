@@ -7,7 +7,7 @@ public class ClockTimer : MonoBehaviour
     public int workDayLength = 1000;//MM:SS
     public float timer = 0;
     public string clockTime;
-    public TextMeshProUGUI clock;
+    public TextMeshProUGUI [] clocks;
     
     void Start()
     {
@@ -17,7 +17,8 @@ public class ClockTimer : MonoBehaviour
     
     void Update()
     {
-        timer += Time.deltaTime;    
+        timer += Time.deltaTime;
+        foreach (TextMeshProUGUI clock in clocks)
         clock.text = timeText();
     }
 

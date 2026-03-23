@@ -187,10 +187,17 @@ public class ArticleManager : MonoBehaviour
     {
         return currentArticle.answer;
     }
-
     public int[] getArticleReasonCodes()
     {
         return currentArticle.ReasonCodes;
+    }
+    public string[] getCurrentArticleDialogue()
+    {
+        return currentArticle.getReporterDialogue();
+    }
+    public int getReporterSpriteIndex()
+    {
+        return currentArticle.reporterSpriteIndex;
     }
 
 }

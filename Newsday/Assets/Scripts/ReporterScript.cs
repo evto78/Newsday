@@ -6,7 +6,6 @@ using TMPro;
 public class ReporterScript : MonoBehaviour
 {
 
-    public GameObject usb;
     public int dialogeIndex;
     public int articleNumber;
     public List<string> introDialoge;
@@ -25,6 +24,7 @@ public class ReporterScript : MonoBehaviour
         dialogeIndex = 0;
         speechBubble.StartTyping(introDialoge[0]);
     }
+    /*
     private void OnEnable()
     {
         if (Application.isPlaying && speechBubble != null)
@@ -34,7 +34,7 @@ public class ReporterScript : MonoBehaviour
             speechBubble.StartTyping(introDialoge[0]);
         }
     }
-
+    */
     public void playIntroDialogue()
     {
         articleNumber++;
@@ -43,17 +43,21 @@ public class ReporterScript : MonoBehaviour
     }
     void Update()
     {
+
         if (!speechBubble.isTyping && (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Return)))
         {
-            switch (articleNumber)
+            if(articleNumber == -1)
             {
-                case 0:
-                    dialogeIndex++;
-                    if (dialogeIndex > introDialoge.Count - 1) { return; }
-                    if (introDialoge[dialogeIndex] == "EXIT") { gameObject.SetActive(false); return; }
-                    speechBubble.StartTyping(introDialoge[dialogeIndex]);
-                    if (dialogeIndex == 6) { usb.gameObject.SetActive(true); }
-                    break;
+                dialogeIndex++;
+                if (dialogeIndex > introDialoge.Count - 1) { return; }
+                if (introDialoge[dialogeIndex] == "EXIT") { gameObject.SetActive(false); return; }
+                speechBubble.StartTyping(introDialoge[dialogeIndex]);
+            }
+            else
+            {
+                dialogeIndex++;
+                if (dialogeIndex > introDialoge.Count - 1) { return; }
+                speechBubble.StartTyping(introDialoge[dialogeIndex]);
             }
             
         }

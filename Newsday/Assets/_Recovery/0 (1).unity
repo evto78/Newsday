@@ -4990,6 +4990,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532917964}
   m_CullTransparentMesh: 1
+--- !u!1 &536717975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536717976}
+  - component: {fileID: 536717978}
+  - component: {fileID: 536717977}
+  m_Layer: 5
+  m_Name: Sprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &536717976
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536717975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1723003311}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &536717977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536717975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e391f8ab326ddcb48af7975b65c767a2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &536717978
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536717975}
+  m_CullTransparentMesh: 1
 --- !u!1 &541531322
 GameObject:
   m_ObjectHideFlags: 0
@@ -5581,6 +5656,7 @@ RectTransform:
   - {fileID: 732162490}
   - {fileID: 171947369}
   - {fileID: 1136921183}
+  - {fileID: 1723003311}
   m_Father: {fileID: 876654606}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8369,6 +8445,7 @@ GameObject:
   - component: {fileID: 940053074}
   - component: {fileID: 940053077}
   - component: {fileID: 940053076}
+  - component: {fileID: 940053075}
   m_Layer: 5
   m_Name: Clock(TMP)
   m_TagString: Untagged
@@ -8395,6 +8472,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0.5, y: 0}
   m_SizeDelta: {x: 1.1999512, y: 0.5447006}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &940053075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940053073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0266b0ad92bac234a984e77a834c4b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClockTimer
+  startingTime: 900
+  workDayLength: 1000
+  timer: 0
+  clockTime: 
+  clock: {fileID: 940053076}
 --- !u!114 &940053076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12290,7 +12384,6 @@ GameObject:
   - component: {fileID: 1475136323}
   - component: {fileID: 1475136322}
   - component: {fileID: 1475136324}
-  - component: {fileID: 1475136325}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12370,24 +12463,6 @@ MonoBehaviour:
   SpeechBubble: {fileID: 1136921182}
   SpeechBubbleTxt: {fileID: 818608066}
   computerButton: {fileID: 1416783460}
---- !u!114 &1475136325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1475136321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0266b0ad92bac234a984e77a834c4b32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClockTimer
-  startingTime: 900
-  workDayLength: 1000
-  timer: 0
-  clockTime: 
-  clocks:
-  - {fileID: 940053076}
 --- !u!1 &1517613800
 GameObject:
   m_ObjectHideFlags: 0
@@ -13236,6 +13311,73 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!1 &1723003310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1723003311}
+  - component: {fileID: 1723003312}
+  m_Layer: 5
+  m_Name: Reporter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1723003311
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723003310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 536717976}
+  m_Father: {fileID: 614264312}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -108.37, y: 132.9}
+  m_SizeDelta: {x: 686.4501, y: 686.4501}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1723003312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723003310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 815a3d97821ab884cbdf9a3fa93ea15a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReporterScript
+  dialogeIndex: 0
+  articleNumber: 0
+  introDialoge:
+  - Hello, good morning!
+  - Since it's your first day, I will explain what you need to do.
+  - A reporter will come in and give your their article on a USB they want for publishing.
+  - All you need to do is plug the USB containing the article into your computer,
+    click on the screen, and review the article.
+  - Make sure to fill out the provided checklist before clicking to approve or deny.
+  - If you get anything wrong, I will probably send you a citation with the printer
+    on your left.
+  - Ok, i'll leave you be so you can review that article in peace, but let the reporter
+    know when you are ready for the next article by knocking on the door.
+  - Good luck!
+  - EXIT
+  articleSpesificDialoge:
+  - dialoge: []
+  speechBubble: {fileID: 818608065}
 --- !u!1 &1739329614
 GameObject:
   m_ObjectHideFlags: 0

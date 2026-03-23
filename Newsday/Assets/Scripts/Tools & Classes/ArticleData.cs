@@ -44,7 +44,8 @@ public class ArticleData : ScriptableObject
     public string bodyFact;
     public string BS_bodyText;
 
-    [Header("Reporter Dialogue")]
+    [Header("Reporter")]
+    public int reporterSpriteIndex = 0;
     [SerializeField] private string[] reporterDialogue;
 
     public string[] getReporterDialogue()

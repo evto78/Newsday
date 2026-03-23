@@ -7,10 +7,11 @@ using Unity.VisualScripting;
 
 public class OfficeManager : MonoBehaviour
 {
+    [SerializeField] private ArticleManager articleManager;
+    [SerializeField] private string[] bossIntroDialogue;
+
     [Header("Reporter")]
     [SerializeField] private GameObject ReporterBody;
-    [SerializeField] private GameObject SpeechBubble;
-    [SerializeField] private TextMeshProUGUI SpeechBubbleTxt;
     [SerializeField] private Transform enterPoint, exitPoint;
     [SerializeField] private float walkingTime;//time it takes to walk from one end of the screen to the center
     private bool walking = false;
@@ -25,14 +26,21 @@ public class OfficeManager : MonoBehaviour
     private ClickAndDragPhysics usbScript;
     public Transform usbSlot;
 
+    [Header("Speech Bubble")]
+    [SerializeField] private StringTyper stringTyper;
+    [SerializeField] private GameObject SpeechBubble;
+    [SerializeField] private TextMeshProUGUI SpeechBubbleTxt;
+
+    [Space]
     public Button computerButton;
     private void Start()
     {
 
-        usbRb = usbStick.AddComponent<Rigidbody2D>();
+        usbRb = usbStick.GetComponent<Rigidbody2D>();
         usbRb.bodyType = RigidbodyType2D.Dynamic;
+        usbScript = usbStick.GetComponent<ClickAndDragPhysics>();
 
-        usbScript = usbStick.AddComponent<ClickAndDragPhysics>();
+        turnOffReporter();
     }
     
     public void USBStay(int id)
@@ -62,7 +70,7 @@ public class OfficeManager : MonoBehaviour
         computerButton.interactable = ((usbRb.bodyType == RigidbodyType2D.Static) && (usbRb.gameObject.activeSelf));
     }
 
-    //TODO
+    //DONE
     private void turnOffReporter()
     {
         usbStick.SetActive(false);
@@ -70,19 +78,69 @@ public class OfficeManager : MonoBehaviour
         ReporterBody.SetActive(false);
     }
 
-    private void enterReporter()
+    
+    //person comes in, talks and drops usb off
+    IEnumerator newPersonCommingIn(string[] dialogue)
     {
+        //1. they walk in
         //set up the position of the reporter and turn them on
         ReporterBody.transform.position = enterPoint.transform.position;
         ReporterBody.SetActive(true);
 
         //walk from the left to the center of the screen
         StartCoroutine(walkFromAToB(enterPoint.position, Vector2.Lerp(enterPoint.position, exitPoint.position, 0.5f)));
+
+        while (walking) yield return null;
+
+        //2. Start talking
+        SpeechBubble.SetActive(true);
+        
+        /* We can't use a for loop cause we have to let the player decide on when to click next
+        //cycle through all the lines of dialogue
+        for(int i = 0; i < dialogue.Length; i++)
+        {
+            stringTyper.StartTyping(dialogue[i]);
+            while (stringTyper.isTyping) yield return null;
+        }
+        */
+        
+        //we start talking to the player
+        stringTyper.startConversation(dialogue);
+
+        while(stringTyper.isTalking) yield return null;
+        
+        //turn off the speech bubble when we are done talking
+        SpeechBubble.SetActive(false);
+
+
+        //3. Drop the usb
+        dropUSB();
     }
+
+    private bool bossIntroDone = false;
+    //DONE
+    public void doorKnock()
+    {
+        if (!bossIntroDone) // our boss is breaking down the rules of the game
+        {
+            bossIntroDone = true;
+            StartCoroutine(newPersonCommingIn(bossIntroDialogue));
+        }
+        else
+        {
+            //the reporter comes in afterwards
+            StartCoroutine(newPersonCommingIn(articleManager.getCurrentArticleDialogue()));
+        }
+    } 
 
     //DONE
     IEnumerator walkFromAToB(Vector2 startingPoint, Vector2 endPoint)
     {
+        if (walkingTime == 0)
+        {
+            Debug.LogError("Walking time is 0, please set it");
+        }
+
         float timer = 0;
         walking = true;
         while (timer <= walkingTime)
@@ -98,10 +156,11 @@ public class OfficeManager : MonoBehaviour
             yield return null;
         }
         walking = false;//we are done walking
+
     }
 
     //DONE
-    private void reporterLeave()
+    public void reporterLeave()
     {   //turn off USB
         usbStick.SetActive(false);
         StartCoroutine(exitReporter());
@@ -118,6 +177,7 @@ public class OfficeManager : MonoBehaviour
         ReporterBody.SetActive(false);
     }
 
+    //DONE
     private void dropUSB()
     {
         usbStick.transform.position = usbSpawnPnt.position;

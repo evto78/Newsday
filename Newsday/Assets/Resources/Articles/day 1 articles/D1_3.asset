@@ -27,7 +27,7 @@ MonoBehaviour:
   messegesIfDenied: []
   id: 2
   misinfo: []
-  ReasonCodes: 
+  ReasonCodes: d2000000
   hue: {r: 0.9388454, g: 1, b: 0, a: 1}
   articleLayout: 0
   answer: 010000000000000001000000010000000100000001000000
@@ -37,7 +37,8 @@ MonoBehaviour:
   BS_date: That is today's date
   bodyFact: 
   BS_bodyText: 
-  reporterSpriteIndex: 2
+  reporterSpriteIndex: 1
   reporterDialogue:
-  - Abby
+  - Hey I'm Jane
+  - Here's my article
   - Abby

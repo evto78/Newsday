@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ArticleData
   headline: "NCR\u2019s Big Coffee claims coffee is going down in price"
   image: {fileID: 21300000, guid: 2683602e296ab6c43af9ab50a334b465, type: 3}
-  author: Hank Mclean
+  author: 
   date: 2026/10/10
   bodyText: "Big Coffee \u2013 corporate giants such as BarStucks, Him Tortons, DcMonalds,
     Cesnaf\xE9 and Bunkin Bonuts report that coffee production has increased after
@@ -51,5 +51,6 @@ MonoBehaviour:
   BS_bodyText: 
   reporterSpriteIndex: 2
   reporterDialogue:
-  - Bob
+  - Hey I'm Hank Mclean
+  - I hope it gets published
   - Bob

@@ -17,6 +17,7 @@ public class OfficeManager : MonoBehaviour
     private bool walking = false;
     [SerializeField] private float stepHeight = 0.2f;//how high the sprite moves up during each step
     [SerializeField] private int numOfSteps = 10;
+    [SerializeField] private GameObject[] reporterSprite = new GameObject[3];
 
     //ALL WIP, HANDLE USB INTERACTIONS IN OFFICE SCENE
     [Header("USB")]
@@ -40,7 +41,7 @@ public class OfficeManager : MonoBehaviour
         usbRb = usbStick.GetComponent<Rigidbody2D>();
         usbRb.bodyType = RigidbodyType2D.Dynamic;
         usbScript = usbStick.GetComponent<ClickAndDragPhysics>();
-
+        turnOffReporterSprites();
         turnOffReporter();
     }
     
@@ -127,15 +128,36 @@ public class OfficeManager : MonoBehaviour
        doorButton.interactable = false;
         if (!bossIntroDone) // our boss is breaking down the rules of the game
         {
+            //set the reporter sprite
+            changeCharacterSprite(0);
+
             bossIntroDone = true;
             StartCoroutine(bossIntro(bossIntroDialogue));
         }
         else
         {
+            //set the reporter sprite
+            changeCharacterSprite(articleManager.getReporterSpriteIndex());
+
             //the reporter comes in afterwards
             StartCoroutine(newPersonCommingIn(articleManager.getCurrentArticleDialogue()));
         }
     } 
+
+    private void changeCharacterSprite(int spriteIndex)
+    {
+        turnOffReporterSprites();
+        reporterSprite[spriteIndex].SetActive(true);
+    }
+
+    private void turnOffReporterSprites()
+    {
+        foreach(GameObject sprite in reporterSprite)
+        {
+            sprite.SetActive(false);
+        }
+    }
+
 
     IEnumerator bossIntro(string[] dialogue)
     {

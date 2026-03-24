@@ -46,7 +46,7 @@ MonoBehaviour:
   BS_date: That is today's date
   bodyFact: 
   BS_bodyText: 
-  reporterSpriteIndex: 0
+  reporterSpriteIndex: 1
   reporterDialogue:
   - Hi I'm Sarah
   - Here's my article

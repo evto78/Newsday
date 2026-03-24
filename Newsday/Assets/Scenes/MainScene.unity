@@ -13923,6 +13923,10 @@ MonoBehaviour:
     on your left.
   - Ok, i'll leave you be so you can review that article in peace, but let the reporter
     know when you are ready for the next article by knocking on the door.
+  - One last thing.
+  - 'People have build faking their names on articles. '
+  - If you see a name that doesn't match...
+  - REJECT IT.
   - Good luck!
   ReporterBody: {fileID: 1290046205}
   enterPoint: {fileID: 1064087367}

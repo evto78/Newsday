@@ -24,7 +24,8 @@ MonoBehaviour:
     3 floors, 40000 books and a small restaurant \u2013 operated by Tomato Town.\r\n"
   messegesIfApproved:
   - I can't wait to see that new library when its constructed!
-  messegesIfDenied: []
+  messegesIfDenied:
+  - Does anyone know what they are building near Pleasent Park?
   id: 2
   misinfo: []
   ReasonCodes: d2000000

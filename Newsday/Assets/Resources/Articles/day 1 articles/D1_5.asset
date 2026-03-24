@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3afb2448c0e5e419c50c90314c17d4, type: 3}
   m_Name: D1_5
   m_EditorClassIdentifier: Assembly-CSharp::ArticleData
-  headline: HEADLINE
+  headline: Ruined Painting
   image: {fileID: 21300000, guid: c73ac274c7f63db41bf1c791f43c4afa, type: 3}
   author: Hank Mclean
   date: 2026/10/10
@@ -28,7 +28,9 @@ MonoBehaviour:
     a message. Not something I necessarily agree with, but now the whole world is
     talking about the protestors, which means they got what they wanted \u2013 bringing
     attention to the oil crisis.\u201D\r\n"
-  messegesIfApproved: []
+  messegesIfApproved:
+  - Gan Vogh's painting is fine
+  - Where is everybody? There's no protest here? #Disapointed
   messegesIfDenied: []
   id: 4
   misinfo: []

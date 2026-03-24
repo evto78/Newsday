@@ -30,7 +30,8 @@ MonoBehaviour:
     knows that they are paid off by Pfister! Those rats are always out to get us!\u201D\r\nA
     representative from Pfister claims that they have done no such thing, and that
     these are false claims from D. Santa.\r\n"
-  messegesIfApproved: []
+  messegesIfApproved:
+  - I thought they said that these cars were viable... I trusted George
   messegesIfDenied: []
   id: 3
   misinfo: []

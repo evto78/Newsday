@@ -1,10 +1,7 @@
 using System.Collections;
-using UnityEditor.VersionControl;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using Unity.VisualScripting;
-using System.Linq;
 
 public class GameManager : MonoBehaviour
 {

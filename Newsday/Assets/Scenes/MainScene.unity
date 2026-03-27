@@ -6851,7 +6851,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Page 7 \u2014 Your Phone\n\nOn the train, you check your phone.\n\nYou
+  m_text: "Page 8 \u2014 Your Phone\n\nOn the train, you check your phone.\n\nYou
     scroll through the news and see what has been published. These are the stories
     that made it through your desk. Some may reflect your good judgment. Others may
     reveal your mistakes.\n\nYou also check your bank statement. Your earnings depend
@@ -12438,7 +12438,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Page 5 \u2014 The Citation Printer\n\nThe Citation Printer helps you understand
+  m_text: "Page 7 \u2014 The Citation Printer\n\nThe Citation Printer helps you understand
     what you may have missed. After you review an article and interact with the checklist\u2014such
     as checking authors, publication dates, etc.. The machine will analyze your decisions.
     It will then point out issues, showing where information may be unreliable, incomplete,
@@ -13316,7 +13316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Page 5 \u2014 The Decision\n\nOnce you finish reviewing an article, you
+  m_text: "Page 6 \u2014 The Decision\n\nOnce you finish reviewing an article, you
     must make a choice.\n\nYou can accept the article and allow it to be published,
     or you can deny it and stop it from reaching the public.\n\nThere is no going
     back after your decision. What you choose will shape the news people read."
@@ -17875,7 +17875,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Page 6 \u2014 The Fact-Checker (Boogle)\n\nOn your computer, you have
+  m_text: "Page 5 \u2014 The Fact-Checker (Boogle)\n\nOn your computer, you have
     access to Boogle, a fact-checker machine.\n\nBoogle allows you to check whether
     a piece of information is correct. Select a piece of information from the article
     and run it through the machine. The result takes a while to load. While it loads,

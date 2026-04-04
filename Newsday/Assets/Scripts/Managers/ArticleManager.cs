@@ -202,4 +202,8 @@ public class ArticleManager : MonoBehaviour
         return currentArticle.reporterSpriteIndex;
     }
 
+    public string getReporterName()
+    {
+        return currentArticle.reporterName;
+    }
 }

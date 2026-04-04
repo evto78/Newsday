@@ -18,6 +18,7 @@ public class OfficeManager : MonoBehaviour
     [SerializeField] private float stepHeight = 0.2f;//how high the sprite moves up during each step
     [SerializeField] private int numOfSteps = 10;
     [SerializeField] private GameObject[] reporterSprite = new GameObject[3];
+    [SerializeField] private TextMeshProUGUI reporterNameTag;
 
     //ALL WIP, HANDLE USB INTERACTIONS IN OFFICE SCENE
     [Header("USB")]
@@ -94,7 +95,8 @@ public class OfficeManager : MonoBehaviour
         StartCoroutine(walkFromAToB(enterPoint.position, Vector2.Lerp(enterPoint.position, exitPoint.position, 0.5f)));
 
         while (walking) yield return null;
-
+        //1.5 turn on their nametag
+        reporterNameTag.text = articleManager.getReporterName();
         //2. Start talking
         SpeechBubble.SetActive(true);
         
@@ -156,6 +158,7 @@ public class OfficeManager : MonoBehaviour
         {
             sprite.SetActive(false);
         }
+        reporterNameTag.text = "";
     }
 
 
@@ -222,6 +225,9 @@ public class OfficeManager : MonoBehaviour
     //DONE
     IEnumerator exitReporter()
     {
+        //turn off their nametag first
+        reporterNameTag.text = "";
+        //start walking
         StartCoroutine(walkFromAToB(Vector2.Lerp(enterPoint.position, exitPoint.position, 0.5f), exitPoint.position));
         while(walking) yield return null;
         //turn off reporter once they made it passed a certain point

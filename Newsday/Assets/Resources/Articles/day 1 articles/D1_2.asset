@@ -49,6 +49,7 @@ MonoBehaviour:
   BS_date: That is today's date
   bodyFact: 
   BS_bodyText: 
+  reporterName: Hank
   reporterSpriteIndex: 2
   reporterDialogue:
   - Hey I'm Hank Mclean

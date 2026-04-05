@@ -101,4 +101,10 @@ public class CitationMachineManager : MonoBehaviour
             time += Time.deltaTime;
         }
     }
+
+    public void turnOffCitations()
+    {
+        citationSlip.SetActive(false);
+        printerSlip.SetActive(false);
+    }
 }

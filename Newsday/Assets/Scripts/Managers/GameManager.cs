@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
         
         //check to see if that was their last article
         articlesDoneToday++;
-        if (articlesDoneToday == articlesPerDay) showSubwayButton();
+        if (articlesDoneToday == articlesPerDay) subwayButton.SetActive(true);
     }
 
     //shows the new day message and preps all the variables for the next day...
@@ -116,14 +116,17 @@ public class GameManager : MonoBehaviour
         //sets and displayes message
         nextDayMessage.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Day " + day;
         StartCoroutine(displayMessage(nextDayMessage));
+        
+        //move back to the first scene
         cameraManager.jumpToScene(0);
+
+        //turn off subway button
+        subwayButton.SetActive(false);
+
+        //turn off any citation that are active
+        citationMachineManager.turnOffCitations();
     }
 
-    private void showSubwayButton()
-    {
-        subwayButton.SetActive(true);
-        articlesDoneToday = 0;
-    }
 
     private void printCitation()
     {

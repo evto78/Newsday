@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    private int day = 1;
+
     [SerializeField] private Checklist checklist;
-    [SerializeField] private GameObject tempWin, tempLose;
+    [SerializeField] private GameObject nextDayMessage;
     [SerializeField] private GameObject subwayButton;
 
     [Header("Managers")]
@@ -56,8 +59,7 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        tempWin.SetActive(false);
-        tempLose.SetActive(false);
+        nextDayMessage.SetActive(false);
         subwayButton.SetActive(false);
         readCSVFile();
 
@@ -102,6 +104,19 @@ public class GameManager : MonoBehaviour
         //check to see if that was their last article
         articlesDoneToday++;
         if (articlesDoneToday == articlesPerDay) showSubwayButton();
+    }
+
+    //shows the new day message and preps all the variables for the next day...
+    public void nextDay()
+    {
+
+        //resets the articles so that the day get begin anew. 
+        day++;
+        articlesDoneToday = 0;
+        //sets and displayes message
+        nextDayMessage.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Day " + day;
+        StartCoroutine(displayMessage(nextDayMessage));
+        cameraManager.jumpToScene(0);
     }
 
     private void showSubwayButton()

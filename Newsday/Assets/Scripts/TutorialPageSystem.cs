@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TutorialPageSystem : MonoBehaviour
 {
@@ -6,14 +7,23 @@ public class TutorialPageSystem : MonoBehaviour
     public class TutorialPage
     {
         public GameObject page;
-        public GameObject[] arrows; // arrows, hand icons, highlight boxes, etc.
+        public GameObject[] arrows;
     }
 
     public TutorialPage[] pages;
+    public bool showArrows = true;
+    public Toggle arrowToggle;
+
     private int currentPage = 0;
 
     void Start()
     {
+        if (arrowToggle != null)
+        {
+            arrowToggle.isOn = showArrows;
+            arrowToggle.onValueChanged.AddListener(SetArrows);
+        }
+
         ShowPage(0);
     }
 
@@ -35,21 +45,39 @@ public class TutorialPageSystem : MonoBehaviour
         }
     }
 
+    public void SetArrows(bool value)
+    {
+        showArrows = value;
+        RefreshArrows();
+    }
+
     void ShowPage(int index)
+    {
+        currentPage = index;
+
+        for (int i = 0; i < pages.Length; i++)
+        {
+            bool isCurrent = (i == index);
+
+            if (pages[i].page != null)
+                pages[i].page.SetActive(isCurrent);
+        }
+
+        RefreshArrows();
+    }
+
+    void RefreshArrows()
     {
         for (int i = 0; i < pages.Length; i++)
         {
-            bool isCurrentPage = (i == index);
-
-            if (pages[i].page != null)
-                pages[i].page.SetActive(isCurrentPage);
+            bool isCurrent = (i == currentPage);
 
             if (pages[i].arrows != null)
             {
                 foreach (GameObject arrow in pages[i].arrows)
                 {
                     if (arrow != null)
-                        arrow.SetActive(isCurrentPage);
+                        arrow.SetActive(isCurrent && showArrows);
                 }
             }
         }
